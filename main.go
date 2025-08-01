@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/PittsGitHub/poogieBot/bot"
+	"github.com/PittsGitHub/poogieBot/internal/commands"
 	"github.com/joho/godotenv"
 )
 
@@ -18,6 +19,14 @@ func main() {
 	if token == "" {
 		log.Fatal("DISCORD_TOKEN not set in environment")
 	}
+
+	// Ensure data is present and fresh
+	log.Println("🐷 Checking for latest mhwilds data...")
+	output, err := commands.RunUpdateScript("./scripts/update-mhwilds.sh")
+	if err != nil {
+		log.Fatalf("❌ Failed to update mhwilds data:\n%s\n%s", output, err)
+	}
+	log.Println("✅ Data update complete.")
 
 	bot.Start(token)
 }

@@ -2,14 +2,18 @@ package bot
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"os/signal"
 	"syscall"
 
+	"github.com/PittsGitHub/poogieBot/internal/commands"
 	"github.com/bwmarrin/discordgo"
+	"github.com/joho/godotenv"
 )
 
 func Start(token string) {
+
 	dg, err := discordgo.New("Bot " + token)
 	if err != nil {
 		fmt.Println("Error creating Discord session,", err)
@@ -57,5 +61,24 @@ func onMessageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 		s.ChannelMessageSend(m.ChannelID, "What a pig! 🐷")
 	case "!dan":
 		s.ChannelMessageSend(m.ChannelID, "What a guy! 😎")
+	case "!update-mhwilds":
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatal("Error loading .env file")
+		}
+
+		ownerID := os.Getenv("OWNER_ID")
+		if m.Author.ID != ownerID {
+			s.ChannelMessageSend(m.ChannelID, "🚫 Oink!? You are not permitted to do that.")
+			return
+		}
+
+		output, err := commands.RunUpdateScript("./scripts/update-mhwilds.sh")
+		if err != nil {
+			s.ChannelMessageSend(m.ChannelID, "❌ Rip. Update failed:\n"+err.Error())
+			return
+		}
+
+		s.ChannelMessageSend(m.ChannelID, "✅ Oink! Update complete:\n```"+output+"```")
 	}
 }
