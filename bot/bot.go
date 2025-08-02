@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 
 	"github.com/PittsGitHub/poogieBot/internal/handlers"
@@ -48,8 +49,13 @@ func onMessageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
-	switch m.Content {
+	if strings.HasPrefix(m.Content, "!find") {
+		args := strings.Fields(m.Content)
+		handlers.FindCommand(s, m, args)
+		return
+	}
 
+	switch m.Content {
 	case "!ping":
 		handlers.HandlePing(s, m)
 	case "!oink":
