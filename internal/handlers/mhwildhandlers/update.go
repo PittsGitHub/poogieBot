@@ -1,9 +1,9 @@
-package handlers
+package mhwildhandlers
 
 import (
 	"os"
 
-	"github.com/PittsGitHub/poogieBot/internal/commands"
+	"github.com/PittsGitHub/poogieBot/internal/commands/mhwildcommands"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -14,7 +14,7 @@ func HandleUpdateMHWilds(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
-	output, err := commands.RunUpdateScript("./scripts/update-mhwilds.sh")
+	output, err := mhwildcommands.RunUpdateScript("./scripts/update-mhwilds.sh")
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, "❌ Rip. Update failed:\n"+err.Error())
 		return

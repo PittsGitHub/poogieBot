@@ -1,4 +1,4 @@
-package handlers
+package mhwildhandlers
 
 import "github.com/bwmarrin/discordgo"
 

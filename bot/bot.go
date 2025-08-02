@@ -7,7 +7,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/PittsGitHub/poogieBot/internal/handlers"
+	"github.com/PittsGitHub/poogieBot/internal/handlers/mhwildhandlers"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -30,7 +30,6 @@ func Start(token string) {
 	}
 
 	fmt.Println("PoogieBot is up! Press Ctrl+C to shut it down.")
-
 	// Wait for termination
 	stop := make(chan os.Signal, 1)
 	signal.Notify(stop, syscall.SIGINT, syscall.SIGTERM, os.Interrupt)
@@ -51,20 +50,20 @@ func onMessageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	if strings.HasPrefix(m.Content, "!find") {
 		args := strings.Fields(m.Content)
-		handlers.FindCommand(s, m, args)
+		mhwildhandlers.FindCommand(s, m, args)
 		return
 	}
 
 	switch m.Content {
 	case "!ping":
-		handlers.HandlePing(s, m)
+		mhwildhandlers.HandlePing(s, m)
 	case "!oink":
-		handlers.HandleOink(s, m)
+		mhwildhandlers.HandleOink(s, m)
 	case "!update-mhwilds":
-		handlers.HandleUpdateMHWilds(s, m)
+		mhwildhandlers.HandleUpdateMHWilds(s, m)
 	case "!beck", "!renn", "!dan", "!bilbo":
-		handlers.HandleMisc(s, m)
+		mhwildhandlers.HandleMisc(s, m)
 	case "!wotd":
-		handlers.HandleRandomWeapon(s, m)
+		mhwildhandlers.HandleRandomWeapon(s, m)
 	}
 }

@@ -1,4 +1,4 @@
-package types
+package mhwildtypes
 
 type Weapon struct {
 	Names        map[string]string `json:"names"`

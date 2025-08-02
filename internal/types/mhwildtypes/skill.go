@@ -1,4 +1,4 @@
-package types
+package mhwildtypes
 
 type Skill struct {
 	GameID int               `json:"game_id"`

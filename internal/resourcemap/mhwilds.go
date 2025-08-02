@@ -1,20 +1,20 @@
 package resourcemap
 
 var WeaponFileMap = map[string]string{
-	"Greatsword":       "mhwilds/weapons/GreatSword.json",
-	"Longsword":        "mhwilds/weapons/LongSword.json",
-	"Sword and Shield": "mhwilds/weapons/SwordAndShield.json",
-	"Dual Blades":      "mhwilds/weapons/DualBlades.json",
-	"Hammer":           "mhwilds/weapons/Hammer.json",
-	"Hunting Horn":     "mhwilds/weapons/HuntingHorn.json", // base file
-	"Lance":            "mhwilds/weapons/Lance.json",
-	"Gunlance":         "mhwilds/weapons/Gunlance.json",
-	"Switch Axe":       "mhwilds/weapons/SwitchAxe.json",
-	"Charge Blade":     "mhwilds/weapons/ChargeBlade.json",
-	"Insect Glaive":    "mhwilds/weapons/InsectGlaive.json",
-	"Light Bowgun":     "mhwilds/weapons/LightBowgun.json",
-	"Heavy Bowgun":     "mhwilds/weapons/HeavyBowgun.json",
-	"Bow":              "mhwilds/weapons/Bow.json",
+	"greatsword":     "mhwilds/weapons/GreatSword.json",
+	"longsword":      "mhwilds/weapons/LongSword.json",
+	"swordandshield": "mhwilds/weapons/SwordAndShield.json",
+	"dualblades":     "mhwilds/weapons/DualBlades.json",
+	"hammer":         "mhwilds/weapons/Hammer.json",
+	"huntinghorn":    "mhwilds/weapons/HuntingHorn.json",
+	"lance":          "mhwilds/weapons/Lance.json",
+	"gunlance":       "mhwilds/weapons/Gunlance.json",
+	"switchaxe":      "mhwilds/weapons/SwitchAxe.json",
+	"chargeblade":    "mhwilds/weapons/ChargeBlade.json",
+	"insectglaive":   "mhwilds/weapons/InsectGlaive.json",
+	"lightbowgun":    "mhwilds/weapons/LightBowgun.json",
+	"heavybowgun":    "mhwilds/weapons/HeavyBowgun.json",
+	"bow":            "mhwilds/weapons/Bow.json",
 }
 
 var HuntingHornVariants = []string{
