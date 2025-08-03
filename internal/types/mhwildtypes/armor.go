@@ -4,7 +4,6 @@ type Armor struct {
 	GameID     int               `json:"game_id"`
 	Rarity     int               `json:"rarity"`
 	Names      map[string]string `json:"names"`
-	Skills     map[string]int    `json:"skills"`
 	SetBonus   *SetBonus         `json:"set_bonus,omitempty"`
 	GroupBonus *GroupBonus       `json:"group_bonus,omitempty"`
 	Pieces     []ArmorPiece      `json:"pieces,omitempty"`

@@ -1,4 +1,4 @@
-package mhwildservices
+package services
 
 import (
 	"strings"

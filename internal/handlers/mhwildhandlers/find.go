@@ -7,6 +7,7 @@ import (
 	"log"
 
 	"github.com/PittsGitHub/poogieBot/internal/data/mhwildsdata"
+	"github.com/PittsGitHub/poogieBot/internal/services"
 	"github.com/PittsGitHub/poogieBot/internal/services/mhwildservices"
 	"github.com/bwmarrin/discordgo"
 )
@@ -28,9 +29,9 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 	}
 
 	//santise our parts
-	itemRank := mhwildservices.Normalise(parts[0])
+	itemRank := services.Normalise(parts[0])
 	//itemType := mhwildservices.Normalise(parts[1]) might not be needed yet with the new lazy loader... maybe?
-	skillName := mhwildservices.FormatTitleCase(parts[2])
+	skillName := services.FormatTitleCase(parts[2])
 
 	//#
 	// Step 2. obtain item collection file paths, desired skill names Id, collection of rarity containers
@@ -78,72 +79,65 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 				name = "[Unnamed]"
 			}
 			fmt.Printf("  - %s\n", name)
+
+			if len(armor.Pieces) > 0 {
+				firstPiece := armor.Pieces[0]
+				pieceName := firstPiece.Names["en"]
+				if pieceName == "" {
+					pieceName = "[Unnamed Piece]"
+				}
+				fmt.Printf("    First Piece: %s (%s)\n", pieceName, firstPiece.Kind)
+			} else {
+				fmt.Println("    No pieces found.")
+			}
 		}
 	}
 
-	s.ChannelMessageSend(m.ChannelID, "Oink!! we made it through find!! OINK. 🐷")
+	filteredArmor := mhwildsdata.FilterArmorBySkillID(foundArmor, skillID)
 
-	//log.Printf("Parsed input — Rank: %s | Type: %s | Skill: %s | Skill ID %s", rank, itemType, skillName, skillID)
+	var rankValue string
 
-	// msg := mhwildservices.FormatArmorSkillMessage(foundArmor, skillID)
-	// s.ChannelMessageSend(m.ChannelID, msg)
+	switch itemRank {
+	case "high":
+		rankValue = "high rank"
+	case "low":
+		rankValue = "low rank"
+	case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10":
+		rankValue = fmt.Sprintf("rarity %s", itemRank)
+	default:
+		rankValue = ""
+	}
 
-	//I need to refine the below and probably handle all types but for now i'll focus on this being armor I think
+	if len(filteredArmor) == 0 {
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ No %s armor found with %s", rankValue, skillName))
+		return
+	}
 
-	// obtain a collection of desired item types of the rarity value
-	//STUB
-	// we write a json parser service,
-	// we take in a collection of strings that are file paths and a collection of rarity values
-	//we loop through each json file found in the file path collection
-	//each file we loop through we check it's rarity value and see if it exists in our collection of raritys
-	//if a match is found we add that object to our collection of items
-	//we continue looping through all files adding objects based on rarity
+	// Debug output
+	for rarity, armorList := range filteredArmor {
+		fmt.Printf("Rarity %d:\n", rarity)
+		for _, armor := range armorList {
+			armorName := armor.Names["en"]
+			if armorName == "" {
+				armorName = "[Unnamed Armor]"
+			}
+			fmt.Printf("  - %s\n", armorName)
 
-	//we now have a collection of all requested item types with the requested rank or rarity value
-	//this will be our itemsWithDesiredRarity collection
+			if len(armor.Pieces) > 0 {
+				for _, piece := range armor.Pieces {
+					pieceName := piece.Names["en"]
+					if pieceName == "" {
+						pieceName = "[Unnamed Piece]"
+					}
+					fmt.Printf("    Piece: %s (%s)\n", pieceName, piece.Kind)
+				}
+			} else {
+				fmt.Println("    [Set/Group bonus match]")
+			}
+		}
+	}
 
-	//we now want to create a new collection itemswithDesiredRarityAndSkill objects from our itemsWithDesiredRarity collection
-	//STUB we write a service to return a collection of objects itemswithDesiredRarityAndSkill
-	//we loop  through the itemsWithDesiredRarity collection and put any objects found matching skill id into itemswithDesiredRarityAndSkill
-	// itemswithDesiredRarityAndSkill collection is then returned
+	message := mhwildservices.BuildArmorSkillSummaryMessage(filteredArmor)
+	s.ChannelMessageSend(m.ChannelID, message)
 
-	// Step 4. sort the itemswithDesiredRarityAndSkill to be formatted and returned as a message
-
-	//STUB service....
-	//break the itemswithDesiredRarityAndSkill collection into smaller collections each grouped by their rarity
-	//so in effect... we end up with a collection of collections with unique rarity but all have the desired skill
-	//we then go through each of these sub collections sorting them
-	//so the items with the most skill level of the desired skill appear first in the collection or ordered list
-	//this is the skills object note the :1 denotes skill level
-	//   "skills": {
-	//   "-481419552": 1,
-	//   "850626240": 1
-	// },
-
-	//STUB service...
-	//now we have our collection with sub collections we need to build the returned message(s)
-	//we build a message with highest rarity collection grouped items at the top of the message
-	// each line has an item it's rarity, item name, skill name, skill level
-	// so it's looks like:
-	// Rarity 8, Steves Shoes, Part Breaker, 2
-	// Rarity 8, Steves Fist, Part Breaker, 1
-	// Rarity 7, MonsterMon Tooth, Part Breaker, 3
-	// Rarity 5, Piddly Helmet, Part Breaker 5
-
-	// place holder return value and logging
-	// actual logic to follow
-	// 	log.Printf("Files to search: %+v", itemCollectionFilePaths)
-	// 	rarity := mhwildservices.Normalise(itemRank)
-	// 	rank := mhwildservices.Normalise(itemRank)
-
-	//		if rank == "high" || rank == "low" {
-	//			log.Printf("Parsed input — Rank: %s | Type: %s | Skill: %s | Skill ID %s", rank, itemType, skillName, skillID)
-	//			s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Searching for:\nRank: %s | Type: %s | Skill: %s ", rank, itemType, skillName))
-	//			return
-	//		} else {
-	//			log.Printf("Parsed input — Rarity: %s | Type: %s | Skill: %s | Skill ID %s", rarity, itemType, skillName, skillID)
-	//			s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Searching for:\nRarity: %s | Type: %s | Skill: %s", rarity, itemType, skillName))
-	//			return
-	//		}
-	//	}
 }

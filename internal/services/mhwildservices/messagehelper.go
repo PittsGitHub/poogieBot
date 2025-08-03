@@ -17,25 +17,29 @@ func FormatArmorSkillMessage(grouped map[int][]mhwildtypes.ArmorMatchResult, ski
 	}
 	sort.Sort(sort.Reverse(sort.IntSlice(rarities)))
 
-	fmt.Println("Formatting message for skill:", skillName)
-
 	for _, rarity := range rarities {
 		armors := grouped[rarity]
-		fmt.Printf("Rarity %d — %d items\n", rarity, len(armors))
 		for _, armor := range armors {
 			name := armor.Set.Names["en"]
-			level, ok := armor.Set.Skills[skillName]
-			fmt.Printf("Checking %s, has skill? %v\n", name, ok)
+			if name == "" {
+				name = "[Unnamed Armor]"
+			}
 
-			if ok {
-				line := fmt.Sprintf("Rarity %d — %s: %s %d\n", rarity, name, skillName, level)
-				builder.WriteString(line)
+			if armor.SetLevelMatch {
+				builder.WriteString(fmt.Sprintf("Rarity %d — %s: %s (set bonus)\n", rarity, name, skillName))
+			}
+
+			for _, pieceMatch := range armor.MatchingPieces {
+				pieceName := pieceMatch.Piece.Names["en"]
+				if pieceName == "" {
+					pieceName = strings.Title(pieceMatch.Piece.Kind)
+				}
+				builder.WriteString(fmt.Sprintf("Rarity %d — %s (%s): %s x%d\n", rarity, name, pieceName, skillName, pieceMatch.SkillLevel))
 			}
 		}
 	}
 
 	if builder.Len() == 0 {
-		fmt.Println("No matches found for skill:", skillName)
 		return "No matching armor pieces found with that skill and rarity."
 	}
 

@@ -3,12 +3,12 @@ package mhwildsdata
 import (
 	"fmt"
 
-	"github.com/PittsGitHub/poogieBot/internal/services/mhwildservices"
+	"github.com/PittsGitHub/poogieBot/internal/services"
 )
 
 func GetSkillIDFromName(skillName string) (string, error) {
-	formatted := mhwildservices.FormatTitleCase(skillName)
-	mhwildsWackyFormat := mhwildservices.CollapseToPartbreakerStyle(formatted)
+	formatted := services.FormatTitleCase(skillName)
+	mhwildsWackyFormat := services.CollapseToPartbreakerStyle(formatted)
 
 	skills, err := LoadSkills()
 	if err != nil {
@@ -17,7 +17,7 @@ func GetSkillIDFromName(skillName string) (string, error) {
 
 	for _, skill := range skills {
 		if name, ok := skill.Names["en"]; ok {
-			if name == formatted || mhwildservices.CollapseToPartbreakerStyle(name) == mhwildsWackyFormat {
+			if name == formatted || services.CollapseToPartbreakerStyle(name) == mhwildsWackyFormat {
 				return fmt.Sprintf("%d", skill.GameID), nil
 			}
 		}
