@@ -1,16 +1,16 @@
-package mhwildservices
+package mhwildsdata
 
 import (
 	"errors"
 
-	"github.com/PittsGitHub/poogieBot/internal/resourcemap"
+	"github.com/PittsGitHub/poogieBot/internal/services/mhwildservices"
 )
 
 // GetItemTypeDataFilePaths returns a list of file paths based on the given item type.
 func GetItemTypeDataFilePaths(rawItemType string) ([]string, error) {
 
 	//we don't assume data has been sanitised
-	itemType := Normalise(rawItemType)
+	itemType := mhwildservices.Normalise(rawItemType)
 
 	//sanitise weapon to weapons for all weapon subtypes
 	if itemType == "weapon" {
@@ -21,23 +21,23 @@ func GetItemTypeDataFilePaths(rawItemType string) ([]string, error) {
 
 	switch itemType {
 	case "armor", "decoration", "talisman":
-		if path, ok := resourcemap.CoreItemFiles[itemType]; ok {
+		if path, ok := CoreItemFiles[itemType]; ok {
 			dataFilePaths = append(dataFilePaths, path)
 		} else {
 			return nil, errors.New("unknown core type: " + itemType)
 		}
 
 	case "weapons":
-		for _, path := range resourcemap.WeaponFileMap {
+		for _, path := range WeaponFileMap {
 			dataFilePaths = append(dataFilePaths, path)
 		}
-		dataFilePaths = append(dataFilePaths, resourcemap.HuntingHornVariants...)
+		dataFilePaths = append(dataFilePaths, HuntingHornVariants...)
 
 	default:
-		if path, ok := resourcemap.WeaponFileMap[itemType]; ok {
+		if path, ok := WeaponFileMap[itemType]; ok {
 			dataFilePaths = append(dataFilePaths, path)
 			if itemType == "huntinghorn" {
-				dataFilePaths = append(dataFilePaths, resourcemap.HuntingHornVariants...)
+				dataFilePaths = append(dataFilePaths, HuntingHornVariants...)
 			}
 		} else {
 			return nil, errors.New("unknown weapon type: " + itemType)

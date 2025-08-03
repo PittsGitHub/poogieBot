@@ -6,12 +6,15 @@ import (
 
 	"log"
 
+	"github.com/PittsGitHub/poogieBot/internal/data/mhwildsdata"
 	"github.com/PittsGitHub/poogieBot/internal/services/mhwildservices"
 	"github.com/bwmarrin/discordgo"
 )
 
 func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
-	// Step 1. arrange sanitise input
+	//#
+	// Step 1. sanitise user inputs
+	//#
 
 	//remove !find from the message and use , as the delimeter
 	raw := strings.TrimPrefix(m.Content, "!find")
@@ -26,47 +29,71 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 
 	//santise our parts
 	itemRank := mhwildservices.Normalise(parts[0])
-	itemType := mhwildservices.Normalise(parts[1])
+	//itemType := mhwildservices.Normalise(parts[1]) might not be needed yet with the new lazy loader... maybe?
 	skillName := mhwildservices.FormatTitleCase(parts[2])
 
-	// Step 2. obtain item collections and Skill name Id
-
-	//collect the file locations for all item types requested
-	itemCollectionFilePaths, err := mhwildservices.GetItemTypeDataFilePaths(itemType)
-	if err != nil {
-		s.ChannelMessageSend(m.ChannelID, err.Error())
-		return
-	}
+	//#
+	// Step 2. obtain item collection file paths, desired skill names Id, collection of rarity containers
+	//#
 
 	//collect the skill id from skill name
-	skillID, err := mhwildservices.GetSkillIDFromName(skillName)
-
+	skillID, err := mhwildsdata.GetSkillIDFromName(skillName)
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, err.Error())
 		return
 	}
+	log.Printf("LOL PRINT skillID: %s ", skillID)
 
-	// Step 3. obtain a collection of matching items of the required rarity that have the desired skill
-
-	// obtain a collection of each rarity value as a string
+	// create a collection of each rarity value as int
 	rarityValues, err := mhwildservices.ResolveRarityValues(itemRank)
-
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, err.Error())
 		return
 	}
-
-	//DEBUG output rarity values to logs
 	log.Printf("Resolved rarity values for '%s':", itemRank)
 	for _, val := range rarityValues {
 		log.Println(" -", val)
 	}
 
-	//we need to refine below
+	//#
+	// Step 3. obtain a collection of matching items of the required rarity that have the desired skill
+	//#
+
+	//We collect all the armor sets that match the desired rarity value
+	//The rarity value is determined by each int entry in the rarityValues var which will be a passed to this func as a int[]
+	//This function needs to return a collection for each passed rarity value, inside each collection is each armor object matching the rarity
+	//We don't need the armor pieces of each armor yet I assume we don't need to provide it to our armors to create an object of that type?
+
+	foundArmor, err := mhwildsdata.GetArmorGroupedByRarity(rarityValues)
+	if err != nil {
+		s.ChannelMessageSend(m.ChannelID, err.Error())
+		return
+	}
+	// Optional debug output
+	for rarity, armorList := range foundArmor {
+		fmt.Printf("Rarity %d:\n", rarity)
+		for _, armor := range armorList {
+			name := armor.Names["en"]
+			if name == "" {
+				name = "[Unnamed]"
+			}
+			fmt.Printf("  - %s\n", name)
+		}
+	}
+
+	s.ChannelMessageSend(m.ChannelID, "Oink!! we made it through find!! OINK. 🐷")
+
+	//log.Printf("Parsed input — Rank: %s | Type: %s | Skill: %s | Skill ID %s", rank, itemType, skillName, skillID)
+
+	// msg := mhwildservices.FormatArmorSkillMessage(foundArmor, skillID)
+	// s.ChannelMessageSend(m.ChannelID, msg)
+
+	//I need to refine the below and probably handle all types but for now i'll focus on this being armor I think
 
 	// obtain a collection of desired item types of the rarity value
 	//STUB
-	// we write a json parser service, we take in a collection of strings that are file paths and a collection of rarity values
+	// we write a json parser service,
+	// we take in a collection of strings that are file paths and a collection of rarity values
 	//we loop through each json file found in the file path collection
 	//each file we loop through we check it's rarity value and see if it exists in our collection of raritys
 	//if a match is found we add that object to our collection of items
@@ -105,17 +132,18 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 
 	// place holder return value and logging
 	// actual logic to follow
-	log.Printf("Files to search: %+v", itemCollectionFilePaths)
-	rarity := mhwildservices.Normalise(itemRank)
-	rank := mhwildservices.Normalise(itemRank)
+	// 	log.Printf("Files to search: %+v", itemCollectionFilePaths)
+	// 	rarity := mhwildservices.Normalise(itemRank)
+	// 	rank := mhwildservices.Normalise(itemRank)
 
-	if rank == "high" || rank == "low" {
-		log.Printf("Parsed input — Rank: %s | Type: %s | Skill: %s | Skill ID %s", rank, itemType, skillName, skillID)
-		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Searching for:\nRank: %s | Type: %s | Skill: %s ", rank, itemType, skillName))
-		return
-	} else {
-		log.Printf("Parsed input — Rarity: %s | Type: %s | Skill: %s | Skill ID %s", rarity, itemType, skillName, skillID)
-		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Searching for:\nRarity: %s | Type: %s | Skill: %s", rarity, itemType, skillName))
-		return
-	}
+	//		if rank == "high" || rank == "low" {
+	//			log.Printf("Parsed input — Rank: %s | Type: %s | Skill: %s | Skill ID %s", rank, itemType, skillName, skillID)
+	//			s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Searching for:\nRank: %s | Type: %s | Skill: %s ", rank, itemType, skillName))
+	//			return
+	//		} else {
+	//			log.Printf("Parsed input — Rarity: %s | Type: %s | Skill: %s | Skill ID %s", rarity, itemType, skillName, skillID)
+	//			s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Searching for:\nRarity: %s | Type: %s | Skill: %s", rarity, itemType, skillName))
+	//			return
+	//		}
+	//	}
 }
