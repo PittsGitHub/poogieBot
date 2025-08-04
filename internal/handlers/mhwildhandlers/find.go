@@ -28,7 +28,7 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 
 	//santise our parts
 	itemRank := services.Normalise(parts[0])
-	//itemType := mhwildservices.Normalise(parts[1]) might not be needed yet with the new lazy loader... maybe?
+	itemType := services.Normalise(parts[1])
 	skillName := services.FormatTitleCase(parts[2])
 
 	//#
@@ -52,10 +52,33 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 	//#
 	// Step 3. obtain a collection of matching items of the required rarity that have the desired skill
 	//#
+	switch itemType {
+	case "armor", "armour":
+		findArmor(rarityValues, s, m, skillID, itemRank, skillName, itemType)
+		return
+	case "weapon":
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
+		//stub find weapon
+		return
+	case "talismun":
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
+		//stub find talismun
+		return
+	case "decoration":
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
+		//stub find decoration
+		return
+	default:
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ item type: %s not recognised", itemType))
+		return
+	}
+
+}
+
+func findArmor(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
 	foundArmor, err := mhwildsdata.GetArmorGroupedByRarity(rarityValues)
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, err.Error())
-		return
 	}
 
 	filteredArmor := mhwildsdata.FilterArmorBySkillID(foundArmor, skillID)
@@ -74,11 +97,9 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 	}
 
 	if len(filteredArmor) == 0 {
-		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ No %s armor found with %s", rankValue, skillName))
-		return
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ No %s %s found with %s", rankValue, itemType, skillName))
 	}
 
 	message := mhwildservices.BuildArmorSkillSummaryMessage(filteredArmor)
 	s.ChannelMessageSend(m.ChannelID, message)
-
 }
