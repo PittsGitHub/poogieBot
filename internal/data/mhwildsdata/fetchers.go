@@ -23,5 +23,5 @@ func GetSkillIDFromName(skillName string) (string, error) {
 		}
 	}
 
-	return "", fmt.Errorf("skill '%s' not found", skillName)
+	return "", fmt.Errorf("❌ skill '%s' not found", skillName)
 }

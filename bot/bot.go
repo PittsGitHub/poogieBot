@@ -50,7 +50,7 @@ func onMessageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 	if strings.HasPrefix(m.Content, "!find") {
 		args := strings.Fields(m.Content)
-		mhwildhandlers.FindCommand(s, m, args)
+		mhwildhandlers.HandleFind(s, m, args)
 		return
 	}
 

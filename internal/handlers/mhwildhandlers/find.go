@@ -4,13 +4,14 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/PittsGitHub/poogieBot/internal/commands/mhwildcommands"
 	"github.com/PittsGitHub/poogieBot/internal/data/mhwildsdata"
 	"github.com/PittsGitHub/poogieBot/internal/services"
 	"github.com/PittsGitHub/poogieBot/internal/services/mhwildservices"
 	"github.com/bwmarrin/discordgo"
 )
 
-func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
+func HandleFind(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 	//#
 	// Step 1. sanitise user inputs
 	//#
@@ -54,52 +55,20 @@ func FindCommand(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 	//#
 	switch itemType {
 	case "armor", "armour":
-		findArmor(rarityValues, s, m, skillID, itemRank, skillName, itemType)
+		mhwildcommands.FindArmor(rarityValues, s, m, skillID, itemRank, skillName, itemType)
 		return
 	case "weapon":
-		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
-		//stub find weapon
+		mhwildcommands.FindWeapon(rarityValues, s, m, skillID, itemRank, skillName, itemType)
 		return
-	case "talismun":
-		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
-		//stub find talismun
+	case "talisman":
+		mhwildcommands.FindTalisman(rarityValues, s, m, skillID, itemRank, skillName, itemType)
 		return
 	case "decoration":
-		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
-		//stub find decoration
+		mhwildcommands.FindDecoration(rarityValues, s, m, skillID, itemRank, skillName, itemType)
 		return
 	default:
 		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ item type: %s not recognised", itemType))
 		return
 	}
 
-}
-
-func findArmor(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
-	foundArmor, err := mhwildsdata.GetArmorGroupedByRarity(rarityValues)
-	if err != nil {
-		s.ChannelMessageSend(m.ChannelID, err.Error())
-	}
-
-	filteredArmor := mhwildsdata.FilterArmorBySkillID(foundArmor, skillID)
-
-	var rankValue string
-
-	switch itemRank {
-	case "high":
-		rankValue = "high rank"
-	case "low":
-		rankValue = "low rank"
-	case "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10":
-		rankValue = fmt.Sprintf("rarity %s", itemRank)
-	default:
-		rankValue = ""
-	}
-
-	if len(filteredArmor) == 0 {
-		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ No %s %s found with %s", rankValue, itemType, skillName))
-	}
-
-	message := mhwildservices.BuildArmorSkillSummaryMessage(filteredArmor)
-	s.ChannelMessageSend(m.ChannelID, message)
 }
