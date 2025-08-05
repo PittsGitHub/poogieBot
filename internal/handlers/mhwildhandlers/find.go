@@ -44,6 +44,9 @@ func HandleFind(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 	}
 
 	// create a collection of each rarity value as int
+	// these rarity value collections need to be moved further down
+	// as the current method is correct and works for Weapons / Armours
+	// for decorations and talismans the ruleset doesn't apply
 	rarityValues, err := mhwildservices.ResolveRarityValues(itemRank)
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, err.Error())
