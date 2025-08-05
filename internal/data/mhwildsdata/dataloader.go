@@ -16,3 +16,7 @@ func LoadSkills() ([]mhwildtypes.Skill, error) {
 func LoadGreatswords() ([]mhwildtypes.Weapon, error) {
 	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["greatsword"])
 }
+
+func LoadTalismans() ([]mhwildtypes.Talisman, error) {
+	return data.LoadJSON[mhwildtypes.Talisman](CoreItemFiles["talisman"])
+}

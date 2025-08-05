@@ -57,11 +57,16 @@ func HandleFind(s *discordgo.Session, m *discordgo.MessageCreate, _ []string) {
 	case "armor", "armour":
 		mhwildcommands.FindArmor(rarityValues, s, m, skillID, itemRank, skillName, itemType)
 		return
-	case "weapon":
+	case "weapon", "weapons",
+		"greatsword", "longsword", "swordandshield", "dualblades",
+		"hammer", "huntinghorn", "lance", "gunlance",
+		"switchaxe", "chargeblade", "insectglaive",
+		"lightbowgun", "heavybowgun", "bow":
 		mhwildcommands.FindWeapon(rarityValues, s, m, skillID, itemRank, skillName, itemType)
 		return
+
 	case "talisman":
-		mhwildcommands.FindTalisman(rarityValues, s, m, skillID, itemRank, skillName, itemType)
+		mhwildcommands.FindHighestRankTalismanWithDesiredSkill(rarityValues, s, m, skillID, itemRank, skillName, itemType)
 		return
 	case "decoration":
 		mhwildcommands.FindDecoration(rarityValues, s, m, skillID, itemRank, skillName, itemType)

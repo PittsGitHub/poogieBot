@@ -9,27 +9,40 @@ import (
 )
 
 func FindArmor(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
-	foundArmor, err := mhwildsdata.GetArmorGroupedByRarity(rarityValues)
+	foundRarityMatchedArmor, err := mhwildsdata.GetArmorGroupedByRarity(rarityValues)
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, err.Error())
 	}
 
-	filteredArmor := mhwildsdata.FilterArmorBySkillID(foundArmor, skillID)
-	if len(filteredArmor) == 0 {
+	filteredArmorBySkillName := mhwildsdata.FilterArmorBySkillID(foundRarityMatchedArmor, skillID)
+	if len(filteredArmorBySkillName) == 0 {
 		failedToFindItem(itemRank, s, m, itemType, skillName)
 	}
 
-	message := mhwildservices.BuildArmorSkillSummaryMessage(filteredArmor)
+	message := mhwildservices.BuildArmorSkillSummaryMessage(filteredArmorBySkillName)
 	s.ChannelMessageSend(m.ChannelID, message)
 }
 
 func FindWeapon(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
 	s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
 
+	// foundRarityMatchedWeapon, err := mhwildsdata.GetArmorGroupedByRarity(rarityValues)
+	// if err != nil {
+	// 	s.ChannelMessageSend(m.ChannelID, err.Error())
+	// }
+
+	//filter those items based on skill name
+
 }
 
-func FindTalisman(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
-	s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
+func FindHighestRankTalismanWithDesiredSkill(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
+
+	filteredTalismanBySkillName, err := mhwildsdata.FilterTalismanBySkill(skillID)
+	if err != nil {
+		s.ChannelMessageSend(m.ChannelID, err.Error())
+	}
+	message := mhwildservices.BuildTalismanSkillSummaryMessage(filteredTalismanBySkillName, skillName)
+	s.ChannelMessageSend(m.ChannelID, message)
 }
 
 func FindDecoration(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {

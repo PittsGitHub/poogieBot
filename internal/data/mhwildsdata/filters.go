@@ -43,3 +43,34 @@ func FilterArmorBySkillID(
 
 	return result
 }
+
+func FilterTalismanBySkill(skillID string) ([]mhwildtypes.TalismanSkillMatch, error) {
+	allTalismans, err := LoadTalismans()
+	if err != nil {
+		return nil, fmt.Errorf("error loading talisman data: %w", err)
+	}
+
+	var results []mhwildtypes.TalismanSkillMatch
+
+	for _, talisman := range allTalismans {
+		highest := mhwildtypes.TalismanRank{}
+		highestLevel := 0
+
+		for _, rank := range talisman.Ranks {
+			if level, ok := rank.Skills[skillID]; ok && level > highestLevel {
+				highest = rank
+				highestLevel = level
+			}
+		}
+
+		if highestLevel > 0 {
+			results = append(results, mhwildtypes.TalismanSkillMatch{
+				TalismanName: highest.Names["en"],
+				SkillLevel:   highestLevel,
+				Rarity:       highest.Rarity,
+			})
+		}
+	}
+
+	return results, nil
+}

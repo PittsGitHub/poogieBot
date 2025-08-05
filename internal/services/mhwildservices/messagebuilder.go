@@ -78,3 +78,24 @@ func BuildArmorSkillSummaryMessage(filteredArmor map[int][]mhwildtypes.Armor) st
 
 	return sb.String()
 }
+
+func BuildTalismanSkillSummaryMessage(talismans []mhwildtypes.TalismanSkillMatch, skillName string) string {
+
+	var sb strings.Builder
+
+	for _, talisman := range talismans {
+		sb.WriteString(fmt.Sprintf("📿 %s:\n (Rarity %d)\n %s x%d \n ",
+			talisman.TalismanName,
+			talisman.Rarity,
+
+			skillName,
+			talisman.SkillLevel,
+		))
+	}
+
+	if len(talismans) == 0 {
+		sb.WriteString("No matching talismans found.\n")
+	}
+
+	return sb.String()
+}
