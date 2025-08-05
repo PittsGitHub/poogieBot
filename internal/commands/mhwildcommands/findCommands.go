@@ -17,6 +17,7 @@ func FindArmor(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCre
 	filteredArmorBySkillName := mhwildsdata.FilterArmorBySkillID(foundRarityMatchedArmor, skillID)
 	if len(filteredArmorBySkillName) == 0 {
 		failedToFindItem(itemRank, s, m, itemType, skillName)
+		return
 	}
 
 	message := mhwildservices.BuildArmorSkillSummaryMessage(filteredArmorBySkillName)
@@ -41,6 +42,10 @@ func FindHighestRankTalismanWithDesiredSkill(rarityValues []int, s *discordgo.Se
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, err.Error())
 	}
+	if len(filteredTalismanBySkillName) == 0 {
+		failedToFindItem(itemRank, s, m, itemType, skillName)
+		return
+	}
 	message := mhwildservices.BuildTalismanSkillSummaryMessage(filteredTalismanBySkillName, skillName)
 	s.ChannelMessageSend(m.ChannelID, message)
 }
@@ -63,5 +68,9 @@ func failedToFindItem(itemRank string, s *discordgo.Session, m *discordgo.Messag
 		rankValue = ""
 	}
 
-	s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ No %s %s found with %s", rankValue, itemType, skillName))
+	if itemType == "talisman" {
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ No %s found with %s", itemType, skillName))
+	} else {
+		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ No %s %s found with %s", rankValue, itemType, skillName))
+	}
 }
