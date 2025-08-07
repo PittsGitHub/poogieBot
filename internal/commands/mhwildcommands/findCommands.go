@@ -27,12 +27,13 @@ func FindArmor(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCre
 func FindWeapon(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
 	s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("type: %s not implemented yet", itemType))
 
-	// foundRarityMatchedWeapon, err := mhwildsdata.GetArmorGroupedByRarity(rarityValues)
-	// if err != nil {
-	// 	s.ChannelMessageSend(m.ChannelID, err.Error())
-	// }
+	//create a map of what functions to load ie weapons, weapon, greatsword, bow etc.
 
-	//filter those items based on skill name
+	//load all weapons of desired rarity
+
+	//filter those weapons  based on skill name
+
+	//print the weapon list back to discord
 
 }
 
