@@ -3,6 +3,7 @@ package mhwildservices
 import (
 	"fmt"
 	"log"
+	"sort"
 	"strings"
 
 	"github.com/PittsGitHub/poogieBot/internal/data/mhwildsdata"
@@ -95,6 +96,63 @@ func BuildTalismanSkillSummaryMessage(talismans []mhwildtypes.TalismanSkillMatch
 
 	if len(talismans) == 0 {
 		sb.WriteString("No matching talismans found.\n")
+	}
+
+	return sb.String()
+}
+
+func BuildWeaponSkillSummaryMessage(filteredWeapons map[int][]mhwildtypes.Weapon) string {
+	skillNameMap, err := mhwildsdata.GetSkillNameMap()
+	if err != nil {
+		log.Printf("Warning: failed to load skill name map: %v", err)
+	}
+
+	var sb strings.Builder
+
+	for rarity, weaponList := range filteredWeapons {
+		sb.WriteString(fmt.Sprintf("**Rarity %d**:\n", rarity))
+
+		for _, w := range weaponList {
+			name := w.Names["en"]
+			if name == "" {
+				name = "[Unnamed Weapon]"
+			}
+
+			// Weapon name
+			sb.WriteString(fmt.Sprintf(" 🗡️ %s\n", name))
+			// Stats on their own line
+			sb.WriteString(fmt.Sprintf("    ATK %d, Affinity %d%%\n", w.AttackRaw, w.Affinity))
+
+			// Skills block
+			if len(w.Skills) > 0 {
+				type kv struct {
+					name string
+					lvl  int
+				}
+				items := make([]kv, 0, len(w.Skills))
+				for id, lvl := range w.Skills {
+					sn := skillNameMap[id]
+					if sn == "" {
+						sn = fmt.Sprintf("[Unknown Skill %s]", id)
+					}
+					items = append(items, kv{name: sn, lvl: lvl})
+				}
+				sort.Slice(items, func(i, j int) bool { return items[i].name < items[j].name })
+
+				sb.WriteString("    Skills:\n")
+				for i, it := range items {
+					trailing := ""
+					if i < len(items)-1 {
+						trailing = ","
+					}
+					sb.WriteString(fmt.Sprintf("    %s x%d%s\n", it.name, it.lvl, trailing))
+				}
+			} else {
+				sb.WriteString("    Skills: [none]\n")
+			}
+
+			sb.WriteString("\n")
+		}
 	}
 
 	return sb.String()

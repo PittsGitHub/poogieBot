@@ -3,7 +3,7 @@ package mhwildsdata
 var WeaponFileMap = map[string]string{
 	"greatsword":     "data/mhwilds/weapons/GreatSword.json",
 	"longsword":      "data/mhwilds/weapons/LongSword.json",
-	"swordandshield": "data/mhwilds/weapons/SwordAndShield.json",
+	"swordandshield": "data/mhwilds/weapons/SwordShield.json",
 	"dualblades":     "data/mhwilds/weapons/DualBlades.json",
 	"hammer":         "data/mhwilds/weapons/Hammer.json",
 	"huntinghorn":    "data/mhwilds/weapons/HuntingHorn.json",

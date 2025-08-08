@@ -74,3 +74,28 @@ func FilterTalismanBySkill(skillID string) ([]mhwildtypes.TalismanSkillMatch, er
 
 	return results, nil
 }
+
+func FilterWeaponsBySkillID(
+	rarityGrouped map[int][]mhwildtypes.Weapon,
+	skillID string,
+) map[int][]mhwildtypes.Weapon {
+	if skillID == "" {
+		return rarityGrouped
+	}
+	res := make(map[int][]mhwildtypes.Weapon, len(rarityGrouped))
+	for r, list := range rarityGrouped {
+		for _, w := range list {
+			if hasWeaponSkill(w, skillID) {
+				res[r] = append(res[r], w)
+			}
+		}
+	}
+	return res
+}
+func hasWeaponSkill(w mhwildtypes.Weapon, skillID string) bool {
+	if w.Skills == nil {
+		return false
+	}
+	_, ok := w.Skills[skillID]
+	return ok
+}
