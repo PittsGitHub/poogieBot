@@ -74,7 +74,37 @@ func FilterTalismanBySkill(skillID string) ([]mhwildtypes.TalismanSkillMatch, er
 
 	return results, nil
 }
+func FilterDecorationsBySkill(skillID string) ([]mhwildtypes.DecorationSkillMatch, error) {
+	if skillID == "" {
+		return nil, fmt.Errorf("skillID is required")
+	}
 
+	// Load all decorations
+	allDecorations, err := LoadDecorations()
+	if err != nil {
+		return nil, fmt.Errorf("error loading decoration data: %w", err)
+	}
+
+	// Prepare the result slice
+	matches := make([]mhwildtypes.DecorationSkillMatch, 0)
+
+	// Iterate through all decorations
+	for _, decoration := range allDecorations {
+		// Check if the decoration has the skillID in its Skills map
+		if level, ok := decoration.Skills[skillID]; ok && level > 0 {
+			// Create a DecorationSkillMatch and add it to the result
+			matches = append(matches, mhwildtypes.DecorationSkillMatch{
+				DecorationName:  decoration.Names["en"], // Use the English name
+				DecorationLevel: decoration.Level,       // Decoration level
+				AllowedOn:       decoration.AllowedOn,   // Allowed slot type
+				SkillLevel:      level,                  // Skill level
+				Rarity:          decoration.Rarity,      // Decoration rarity
+			})
+		}
+	}
+
+	return matches, nil
+}
 func FilterWeaponsBySkillID(
 	rarityGrouped map[int][]mhwildtypes.Weapon,
 	skillID string,

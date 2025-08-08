@@ -101,6 +101,25 @@ func BuildTalismanSkillSummaryMessage(talismans []mhwildtypes.TalismanSkillMatch
 	return sb.String()
 }
 
+func BuildDecorationSkillSummaryMessage(decorations []mhwildtypes.DecorationSkillMatch, skillName string) string {
+	var sb strings.Builder
+
+	for _, decoration := range decorations {
+		sb.WriteString(fmt.Sprintf("💎 %s:\n Deco Level: %d\n Used in: %s\n %s x%d\n\n",
+			decoration.DecorationName,
+			decoration.DecorationLevel,
+			decoration.AllowedOn, // Properly display the AllowedOn field
+			skillName,
+			decoration.SkillLevel,
+		))
+	}
+
+	if len(decorations) == 0 {
+		sb.WriteString("No matching decorations found.\n")
+	}
+
+	return sb.String()
+}
 func BuildWeaponSkillSummaryMessage(filteredWeapons map[int][]mhwildtypes.Weapon) string {
 
 	skillNameMap, err := mhwildsdata.GetSkillNameMap()

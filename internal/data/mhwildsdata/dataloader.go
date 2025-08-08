@@ -161,3 +161,7 @@ func LoadBows() ([]mhwildtypes.Weapon, error) {
 func LoadTalismans() ([]mhwildtypes.Talisman, error) {
 	return data.LoadJSON[mhwildtypes.Talisman](CoreItemFiles["talisman"])
 }
+
+func LoadDecorations() ([]mhwildtypes.Decoration, error) {
+	return data.LoadJSON[mhwildtypes.Decoration](CoreItemFiles["decoration"])
+}
