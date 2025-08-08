@@ -31,24 +31,6 @@ func GetArmorGroupedByRarity(rarities []int) (map[int][]mhwildtypes.Armor, error
 	return result, nil
 }
 
-// func GetAllWeaponsGroupedByRarity(rarities []int) ([]mhwildtypes.Weapon, error) {
-// 	result := []mhwildtypes.Weapon
-
-// 	allWeapons, err := LoadAllWeapons()
-// 	if err != nil {
-// 		return result, fmt.Errorf("error loading armor data: %w", err)
-// 	}
-
-// 	// Filter and group
-// 	for _, armor := range allWeapons {
-// 		if raritySet[armor.Rarity] {
-// 			result[armor.Rarity] = append(result[armor.Rarity], armor)
-// 		}
-// 	}
-
-// 	return result, nil
-// }
-
 func GetWeaponsGroupedByRarity(weapons []mhwildtypes.Weapon, rarities []int) (map[int][]mhwildtypes.Weapon, error) {
 	result := make(map[int][]mhwildtypes.Weapon)
 

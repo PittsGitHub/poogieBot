@@ -8,12 +8,12 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-const discordMaxMessageLen = 50
+const discordMaxMessageLen = 1800
 
 // SendChunkedMessageSlowly splits msg on blank lines and sends as few messages as possible,
 // pausing `delay` between each send to avoid rate limits. Pass delay=0 to use a safe default.
 func SendChunkedMessageSlowly(s *discordgo.Session, channelID string, msg string) error {
-	delay := 5 * time.Second
+	delay := 1 * time.Second
 
 	// If it fits in one message, send directly
 	if len(msg) <= discordMaxMessageLen {

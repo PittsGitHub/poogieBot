@@ -38,7 +38,6 @@ func FindWeapon(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCr
 		weapons = weaponsLoaded
 
 	} else {
-		// 3) Load a single type via the map
 		loader, ok := mhwildsdata.WeaponLoaders[itemType]
 		if !ok {
 			_, _ = s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Unknown weapon type: %q", itemType))

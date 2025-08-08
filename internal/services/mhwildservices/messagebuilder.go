@@ -122,7 +122,7 @@ func BuildWeaponSkillSummaryMessage(filteredWeapons map[int][]mhwildtypes.Weapon
 			// Weapon name
 			sb.WriteString(fmt.Sprintf(" 🗡️ %s\n", name))
 			// Stats on their own line
-			sb.WriteString(fmt.Sprintf("    ATK %d, Affinity %d%%\n", w.AttackRaw, w.Affinity))
+			sb.WriteString(fmt.Sprintf("    ATK %d, Affinity %d%%\n", w.AttackCalculated, w.Affinity))
 
 			// Skills block
 			if len(w.Skills) > 0 {

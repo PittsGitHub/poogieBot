@@ -3,6 +3,7 @@ package mhwildsdata
 import (
 	"errors"
 	"fmt"
+	"math"
 	"sort"
 
 	"github.com/PittsGitHub/poogieBot/internal/data"
@@ -61,60 +62,100 @@ func LoadSkills() ([]mhwildtypes.Skill, error) {
 	return data.LoadJSON[mhwildtypes.Skill](CoreItemFiles["skill"])
 }
 
+// shared helper: load JSON and apply modifier to calculate AttackCalculated
+func loadWeaponsWithModifier(file string, mod float64) ([]mhwildtypes.Weapon, error) {
+	ws, err := data.LoadJSON[mhwildtypes.Weapon](file)
+	if err != nil {
+		return nil, err
+	}
+	for i := range ws {
+		ws[i].AttackCalculated = int(math.Round(float64(ws[i].AttackRaw) * mod))
+	}
+	return ws, nil
+}
+
+// Great Sword
 func LoadGreatswords() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["greatsword"])
+	const greatSwordModifier = 4.8
+	return loadWeaponsWithModifier(WeaponFileMap["greatsword"], greatSwordModifier)
 }
 
+// Long Sword
 func LoadLongswords() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["longsword"])
+	const longSwordModifier = 3.3
+	return loadWeaponsWithModifier(WeaponFileMap["longsword"], longSwordModifier)
 }
 
+// Sword & Shield
 func LoadSwordAndShields() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["swordandshield"])
+	const swordAndShieldModifier = 1.4
+	return loadWeaponsWithModifier(WeaponFileMap["swordandshield"], swordAndShieldModifier)
 }
 
+// Dual Blades
 func LoadDualBlades() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["dualblades"])
+	const dualBladesModifier = 1.4
+	return loadWeaponsWithModifier(WeaponFileMap["dualblades"], dualBladesModifier)
 }
 
+// Hammer
 func LoadHammers() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["hammer"])
+	const hammerModifier = 5.2
+	return loadWeaponsWithModifier(WeaponFileMap["hammer"], hammerModifier)
 }
 
+// Hunting Horn
 func LoadHuntingHorns() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["huntinghorn"])
+	const huntingHornModifier = 4.2
+	return loadWeaponsWithModifier(WeaponFileMap["huntinghorn"], huntingHornModifier)
 }
 
+// Lance
 func LoadLances() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["lance"])
+	const lanceModifier = 2.3
+	return loadWeaponsWithModifier(WeaponFileMap["lance"], lanceModifier)
 }
 
+// Gunlance
 func LoadGunlances() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["gunlance"])
+	const gunlanceModifier = 2.3
+	return loadWeaponsWithModifier(WeaponFileMap["gunlance"], gunlanceModifier)
 }
 
+// Switch Axe
 func LoadSwitchAxes() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["switchaxe"])
+	const switchAxeModifier = 3.5
+	return loadWeaponsWithModifier(WeaponFileMap["switchaxe"], switchAxeModifier)
 }
 
+// Charge Blade
 func LoadChargeBlades() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["chargeblade"])
+	const chargeBladeModifier = 3.6
+	return loadWeaponsWithModifier(WeaponFileMap["chargeblade"], chargeBladeModifier)
 }
 
+// Insect Glaive
 func LoadInsectGlaives() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["insectglaive"])
+	const insectGlaiveModifier = 3.1
+	return loadWeaponsWithModifier(WeaponFileMap["insectglaive"], insectGlaiveModifier)
 }
 
+// Light Bowgun
 func LoadLightBowguns() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["lightbowgun"])
+	const lightBowgunModifier = 1.3
+	return loadWeaponsWithModifier(WeaponFileMap["lightbowgun"], lightBowgunModifier)
 }
 
+// Heavy Bowgun
 func LoadHeavyBowguns() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["heavybowgun"])
+	const heavyBowgunModifier = 1.5
+	return loadWeaponsWithModifier(WeaponFileMap["heavybowgun"], heavyBowgunModifier)
 }
 
+// Bow
 func LoadBows() ([]mhwildtypes.Weapon, error) {
-	return data.LoadJSON[mhwildtypes.Weapon](WeaponFileMap["bow"])
+	const bowModifier = 1.2
+	return loadWeaponsWithModifier(WeaponFileMap["bow"], bowModifier)
 }
 
 func LoadTalismans() ([]mhwildtypes.Talisman, error) {
