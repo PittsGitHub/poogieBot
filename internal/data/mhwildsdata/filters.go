@@ -79,6 +79,7 @@ func FilterWeaponsBySkillID(
 	rarityGrouped map[int][]mhwildtypes.Weapon,
 	skillID string,
 ) map[int][]mhwildtypes.Weapon {
+
 	if skillID == "" {
 		return rarityGrouped
 	}

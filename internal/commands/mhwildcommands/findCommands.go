@@ -30,22 +30,17 @@ func FindWeapon(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCr
 	var weapons []mhwildtypes.Weapon
 	var err error
 
-	// 2) Load everything if "weapon(s)"
 	if itemType == "weapon" || itemType == "weapons" {
-		for name, loader := range mhwildsdata.WeaponLoaders {
-			ws, loadErr := loader()
-			if loadErr != nil {
-				// log and keep going; one bad file shouldn’t kill the whole query
-				fmt.Printf("load %s failed: %v\n", name, loadErr)
-				continue
-			}
-			weapons = append(weapons, ws...)
+		weaponsLoaded, err := mhwildsdata.LoadAllWeapons()
+		if err != nil {
+			s.ChannelMessageSend(m.ChannelID, err.Error())
 		}
+		weapons = weaponsLoaded
+
 	} else {
 		// 3) Load a single type via the map
 		loader, ok := mhwildsdata.WeaponLoaders[itemType]
 		if !ok {
-			// unknown type → early return/message
 			_, _ = s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("Unknown weapon type: %q", itemType))
 			return
 		}
@@ -67,8 +62,12 @@ func FindWeapon(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCr
 		return
 	}
 
-	message := mhwildservices.BuildWeaponSkillSummaryMessage(groupedFilteredWeaponsBySkillName)
-	s.ChannelMessageSend(m.ChannelID, message)
+	messageFormatted := mhwildservices.BuildWeaponSkillSummaryMessage(groupedFilteredWeaponsBySkillName)
+
+	err = mhwildservices.SendChunkedMessageSlowly(s, m.ChannelID, messageFormatted)
+	if err != nil {
+		s.ChannelMessageSend(m.ChannelID, err.Error())
+	}
 }
 
 func FindHighestRankTalismanWithDesiredSkill(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {

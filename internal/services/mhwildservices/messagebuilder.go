@@ -102,6 +102,7 @@ func BuildTalismanSkillSummaryMessage(talismans []mhwildtypes.TalismanSkillMatch
 }
 
 func BuildWeaponSkillSummaryMessage(filteredWeapons map[int][]mhwildtypes.Weapon) string {
+
 	skillNameMap, err := mhwildsdata.GetSkillNameMap()
 	if err != nil {
 		log.Printf("Warning: failed to load skill name map: %v", err)
