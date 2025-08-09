@@ -2,6 +2,17 @@
 
 A Discord bot for **Monster Hunter Wilds** gear lookups based on desired skill name
 
+### 🔐 Required Permissions
+
+PoogieBot only needs minimal permissions to function properly:
+
+- Send Messages
+- Embed Links
+
+These permissions are built into the official invite link:
+[Invite PoogieBot](https://discord.com/oauth2/authorize?client_id=1400521755604287582&permissions=83968&integration_type=0&scope=bot)
+
+
 🧪 Examples:
 
 🛡️ Show all low rank armor for part breaker
