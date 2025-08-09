@@ -3,3 +3,5 @@
 tmp/
 rawdata/
 data/mhwilds
+data/*
+poogiebot
