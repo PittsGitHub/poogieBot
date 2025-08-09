@@ -2,6 +2,8 @@
 
 A Discord bot for **Monster Hunter Wilds** gear lookups based on desired skill name
 
+[Uses the mhwilds db by LartTyler](https://github.com/LartTyler/mhdb-wilds-data)
+
 ### 🔐 Required Permissions
 
 PoogieBot only needs minimal permissions to function properly:
