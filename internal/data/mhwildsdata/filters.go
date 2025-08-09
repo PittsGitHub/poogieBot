@@ -74,6 +74,7 @@ func FilterTalismanBySkill(skillID string) ([]mhwildtypes.TalismanSkillMatch, er
 
 	return results, nil
 }
+
 func FilterDecorationsBySkill(skillID string) ([]mhwildtypes.DecorationSkillMatch, error) {
 	if skillID == "" {
 		return nil, fmt.Errorf("skillID is required")
@@ -105,6 +106,7 @@ func FilterDecorationsBySkill(skillID string) ([]mhwildtypes.DecorationSkillMatc
 
 	return matches, nil
 }
+
 func FilterWeaponsBySkillID(
 	rarityGrouped map[int][]mhwildtypes.Weapon,
 	skillID string,
