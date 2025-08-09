@@ -2,7 +2,7 @@
 
 A Discord bot for **Monster Hunter Wilds** gear lookups based on desired skill name
 
-[Uses the mhwilds db by LartTyler](https://github.com/LartTyler/mhdb-wilds-data)
+Uses the [mhwilds db by LartTyler](https://github.com/LartTyler/mhdb-wilds-data)
 
 ### 🔐 Required Permissions
 
