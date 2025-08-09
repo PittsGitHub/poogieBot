@@ -1,4 +1,5 @@
 .env
 .air.toml
 tmp/
-data/
+rawdata/
+data/mhwilds

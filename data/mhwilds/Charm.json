@@ -1,0 +1,1674 @@
+[
+  {
+    "game_id": -2068511872,
+    "names": {
+      "ja": "希望のスカーフ・桃",
+      "en": "Hope Scarf: Peach",
+      "fr": "Foulard d'espoir : rose",
+      "it": "Speranza: pesca",
+      "de": "Hoffnung: Pink",
+      "es": "Pañuelo: Rosa",
+      "ru": "Шарф надежды: розовый",
+      "pl": "Szal nadziei: cielisty",
+      "pt-BR": "Esperança: Pêssego",
+      "ko": "희망의 스카프/분홍",
+      "zh-Hant": "希望領巾・桃紅",
+      "zh-Hans": "希望领巾·桃",
+      "ar": "وشاح الأمل: قرنفلي",
+      "es-419": "Pañuelo: Rosa"
+    }
+  },
+  {
+    "game_id": -1948802432,
+    "names": {
+      "ja": "希望のスカーフＳ・群青",
+      "en": "Hope Scarf S: Blue",
+      "fr": "Foulard d'espoir S : bleu",
+      "it": "Speranza S: blu",
+      "de": "Hoffnung S: Blau",
+      "es": "Pañuelo S: Azul",
+      "ru": "Шарф надежды S: синий",
+      "pl": "Szal nadziei S: błękit",
+      "pt-BR": "Esperança S: Azul",
+      "ko": "희망의 스카프S/군청",
+      "zh-Hant": "希望領巾S・群青",
+      "zh-Hans": "希望领巾S·群青",
+      "ar": "وشاح الأمل S: أزرق",
+      "es-419": "Pañuelo S: Azul"
+    }
+  },
+  {
+    "game_id": -1671191168,
+    "names": {
+      "ja": "希望のスカーフＧ・青赤",
+      "en": "Hope Scarf G: Blue/Red",
+      "fr": "Foulard d'espoir G : bleu/rouge",
+      "it": "Speranza G: blu/rossa",
+      "de": "Hoffnung G: Blau-Rot",
+      "es": "Pañuelo G: Azul/rojo",
+      "ru": "Шарф надежды G: сине-крас.",
+      "pl": "S. nadziei G: błękit-bordo",
+      "pt-BR": "Esperança G: Azul/Verm.",
+      "ko": "희망의 스카프G/청적",
+      "zh-Hant": "希望領巾G・藍紅",
+      "zh-Hans": "希望领巾G·红蓝",
+      "ar": "وشاح الأمل G: أزرق/أحمر",
+      "es-419": "Pañuelo G: Azul/rojo"
+    }
+  },
+  {
+    "game_id": -1552970880,
+    "names": {
+      "ja": "背伸びしろねこハニワ",
+      "en": "Stretched White Cat",
+      "fr": "Chat blanc étiré",
+      "it": "Gatto bianco rilassato",
+      "de": "Weiße Katze (lang)",
+      "es": "Gato blanco estirado",
+      "ru": "Потягивающийся белый кот",
+      "pl": "Rozciągnięty biały kot",
+      "pt-BR": "Gato Branco Alongado",
+      "ko": "길쭉 하얀 고양이 모형",
+      "zh-Hant": "長長白貓陶偶",
+      "zh-Hans": "长身白猫陶俑",
+      "ar": "قطة بيضاء متمطّطة",
+      "es-419": "Gato blanco estirándose"
+    }
+  },
+  {
+    "game_id": -1314967296,
+    "names": {
+      "ja": "決意の証【鎖刃竜】",
+      "en": "Arkveld: Mark of Resolve",
+      "fr": "Arkveld : gage de détermination",
+      "it": "Arkveld: Marchio risoluzione",
+      "de": "Arkveld: Entschluss",
+      "es": "Arkveld: Señal de determ.",
+      "ru": "Арквельд: знак решимости",
+      "pl": "Arkveld: Symbol determ.",
+      "pt-BR": "Arkveld: Resolução",
+      "ko": "결의의 증표【쇄인룡】",
+      "zh-Hant": "決意之證【鎖刃龍】",
+      "zh-Hans": "决意之证【锁刃龙】",
+      "ar": "آركفيلد: علامة الإصرار",
+      "es-419": "Arkveld: Marca resolución"
+    }
+  },
+  {
+    "game_id": -1215490048,
+    "names": {
+      "ja": "希望のスカーフＳ・紫",
+      "en": "Hope Scarf S: Purple",
+      "fr": "Foulard d'espoir S : violet",
+      "it": "Speranza S: viola",
+      "de": "Hoffnung S: Lila",
+      "es": "Pañuelo S: Morado",
+      "ru": "Шарф надежды S: фиолет.",
+      "pl": "Szal nadziei S: fiolet",
+      "pt-BR": "Esperança S: Roxo",
+      "ko": "희망의 스카프S/보라",
+      "zh-Hant": "希望領巾S・紫",
+      "zh-Hans": "希望领巾S·紫",
+      "ar": "وشاح الأمل S: أرجواني",
+      "es-419": "Pañuelo S: Morado"
+    }
+  },
+  {
+    "game_id": -1022857536,
+    "names": {
+      "ja": "希望のスカーフ・青赤",
+      "en": "Hope Scarf: Teal/Orange",
+      "fr": "Foulard d'espoir : cyan/orange",
+      "it": "Speranza: turchese/arancio",
+      "de": "Hoffnung: Blau-Orange",
+      "es": "Pañuelo: Verde/naranja",
+      "ru": "Шарф надежды: бир.-оранж.",
+      "pl": "S. nadziei S: lazur-cegła",
+      "pt-BR": "Esperança: Ciano/Laranja",
+      "ko": "희망의 스카프/청적",
+      "zh-Hant": "希望領巾・藍紅",
+      "zh-Hans": "希望领巾·红蓝",
+      "ar": "وشاح الأمل: أزرق مخضر/برتقالي",
+      "es-419": "Pañuelo: Celeste/naranja"
+    }
+  },
+  {
+    "game_id": -944934144,
+    "names": {
+      "ja": "希望のスカーフ・紅",
+      "en": "Hope Scarf: Crimson",
+      "fr": "Foulard d'espoir : pourpre",
+      "it": "Speranza: cremisi",
+      "de": "Hoffnung: Karmesin",
+      "es": "Pañuelo: Carmesí",
+      "ru": "Шарф надежды: алый",
+      "pl": "Szal nadziei: karmazynowy",
+      "pt-BR": "Esperança: Carmesim",
+      "ko": "희망의 스카프/홍",
+      "zh-Hant": "希望領巾・紅",
+      "zh-Hans": "希望领巾·红",
+      "ar": "وشاح الأمل: قرمزي",
+      "es-419": "Pañuelo: Carmesí"
+    }
+  },
+  {
+    "game_id": -700739456,
+    "names": {
+      "ja": "希望のスカーフ・茶",
+      "en": "Hope Scarf: Brown",
+      "fr": "Foulard d'espoir : marron",
+      "it": "Speranza: marrone",
+      "de": "Hoffnung: Braun",
+      "es": "Pañuelo: Marrón",
+      "ru": "Шарф надежды: коричн.",
+      "pl": "Szal nadziei: brąz",
+      "pt-BR": "Esperança: Marrom",
+      "ko": "희망의 스카프/갈",
+      "zh-Hant": "希望領巾・褐",
+      "zh-Hans": "希望领巾·褐",
+      "ar": "وشاح الأمل: بني",
+      "es-419": "Pañuelo: Marrón"
+    }
+  },
+  {
+    "game_id": -505734624,
+    "names": {
+      "ja": "希望のスカーフＳ・萌黄",
+      "en": "Hope Scarf S: Green",
+      "fr": "Foulard d'espoir S : vert",
+      "it": "Speranza S: verde",
+      "de": "Hoffnung S: Grün",
+      "es": "Pañuelo S: Verde",
+      "ru": "Шарф надежды S: зелёный",
+      "pl": "Szal nadziei S: zieleń",
+      "pt-BR": "Esperança S: Verde",
+      "ko": "희망의 스카프/연두",
+      "zh-Hant": "希望領巾S・嫩綠",
+      "zh-Hans": "希望领巾S·嫩绿",
+      "ar": "وشاح الأمل S: أخضر",
+      "es-419": "Pañuelo S: Verde"
+    }
+  },
+  {
+    "game_id": -181392528,
+    "names": {
+      "ja": "希望のスカーフＧ・青緑",
+      "en": "Hope Scarf G: Grape",
+      "fr": "Foulard d'espoir G : raisin",
+      "it": "Speranza G: uva",
+      "de": "Hoffnung G: Traube",
+      "es": "Pañuelo G: Morado",
+      "ru": "Шарф надежды G: виноград",
+      "pl": "Szal nadziei G: winogrono",
+      "pt-BR": "Esperança G: Uva",
+      "ko": "희망의 스카프G/청녹",
+      "zh-Hant": "希望領巾G・藍綠",
+      "zh-Hans": "希望领巾G·蓝绿",
+      "ar": "وشاح الأمل G: فيروزي",
+      "es-419": "Pañuelo G: Uva"
+    }
+  },
+  {
+    "game_id": 154,
+    "names": {
+      "ja": "フェアリーライト・緑輝",
+      "en": "Green Fairy Light",
+      "fr": "Lumière féérique verte",
+      "it": "Luce di fata verde",
+      "de": "Feenlicht (grün)",
+      "es": "Luz feérica verde",
+      "ru": "Зелёный фонарик",
+      "pl": "Zielone światełko",
+      "pt-BR": "Luz Fádica Verde",
+      "ko": "페어리라이트 그린",
+      "zh-Hant": "妖精之光・綠輝",
+      "zh-Hans": "精灵之光·绿辉",
+      "ar": "ضوء الجنية الأخضر",
+      "es-419": "Luz feérica verde"
+    }
+  },
+  {
+    "game_id": 160,
+    "names": {
+      "ja": "ふわふわヨツバカゲロウ",
+      "en": "Fluttering Quatreflies",
+      "fr": "Trèflémères",
+      "it": "Quadrifarfalle in volo",
+      "de": "Tristramfliegen",
+      "es": "Moscuatrillos aleteando",
+      "ru": "Порхающие четверницы",
+      "pl": "Trzepoczące czterojętki",
+      "pt-BR": "Trevoletas Esvoaçantes",
+      "ko": "하늘하늘 사엽 하루살이",
+      "zh-Hant": "輕盈四葉蜉蝣",
+      "zh-Hans": "轻盈四叶蜉蝣",
+      "ar": "فراشات رباعية متراقصة",
+      "es-419": "Cuatrimoscas aleteando"
+    }
+  },
+  {
+    "game_id": 610,
+    "names": {
+      "ja": "花舞のブーケ・白",
+      "en": "Sakura Posy: White",
+      "fr": "Bouquet blanc",
+      "it": "Bouquet sakura: bianco",
+      "de": "Sakura-Strauß (weiß)",
+      "es": "Ramillete de Sakura: Blanco",
+      "ru": "Букет сакуры: белый",
+      "pl": "Bukiet sakur: biały",
+      "pt-BR": "Ramo de Cerejeira: Branco",
+      "ko": "화무 부케/화이트",
+      "zh-Hant": "花舞捧花・白",
+      "zh-Hans": "花舞之束・白",
+      "ar": "باقة أزهار ساكورا: بيضاء",
+      "es-419": "Sakura blanca"
+    }
+  },
+  {
+    "game_id": 981,
+    "names": {
+      "ja": "希望のスカーフＧ・青紫",
+      "en": "Hope Scarf G: Pink/Blue",
+      "fr": "Foulard d'espoir G : rose/bleu",
+      "it": "Speranza G: rosa/blu",
+      "de": "Hoffnung G: Rosa-Blau",
+      "es": "Pañuelo G: Rosa/azul",
+      "ru": "Шарф надежды G: роз.-гол.",
+      "pl": "Szal nadziei G: róż-błękit",
+      "pt-BR": "Esperança G: Rosa/Azul",
+      "ko": "희망의 스카프G/청자",
+      "zh-Hant": "希望領巾G・藍紫",
+      "zh-Hans": "希望领巾G·紫蓝",
+      "ar": "وشاح الأمل G: وردي/أزرق",
+      "es-419": "Pañuelo G: Rosa/azul"
+    }
+  },
+  {
+    "game_id": 1321,
+    "names": {
+      "ja": "フェアリーライト・赤輝",
+      "en": "Red Fairy Light",
+      "fr": "Lumière féérique rouge",
+      "it": "Luce di fata rossa",
+      "de": "Feenlicht (rot)",
+      "es": "Luz feérica roja",
+      "ru": "Красный фонарик",
+      "pl": "Czerwone światełko",
+      "pt-BR": "Luz Fádica Vermelha",
+      "ko": "페어리라이트 레드",
+      "zh-Hant": "妖精之光・赤輝",
+      "zh-Hans": "精灵之光·赤辉",
+      "ar": "ضوء الجنية الأحمر",
+      "es-419": "Luz feérica roja"
+    }
+  },
+  {
+    "game_id": 1952,
+    "names": {
+      "ja": "勇者の証【波衣竜】",
+      "en": "Uth Duna: Mark of Bravery",
+      "fr": "Uth Duna : gage de bravoure",
+      "it": "Uth Duna: M. valore",
+      "de": "Uth Duna: Mut",
+      "es": "Uth Duna: Señal de valor",
+      "ru": "Ут дуна: знак героя",
+      "pl": "Uth Duna: Symbol odwagi",
+      "pt-BR": "Uth Duna: Bravura",
+      "ko": "용사의 증표【파의룡】",
+      "zh-Hant": "勇者之證【波衣龍】",
+      "zh-Hans": "勇者之证【波衣龙】",
+      "ar": "أوث دونا: رمز الشجاعة",
+      "es-419": "Uth Duna: valor"
+    }
+  },
+  {
+    "game_id": 2352,
+    "names": {
+      "ja": "覇者の証【闢獣】",
+      "en": "Doshaguma: Mark of Mastery",
+      "fr": "Doshaguma : gage de maîtrise",
+      "it": "Dosha: Marchio maestria",
+      "de": "Dosha: Dominanz",
+      "es": "Dosha: Señal de dominio",
+      "ru": "Дошагума: знак мастера",
+      "pl": "Dosha: Symbol mistrzostwa",
+      "pt-BR": "Doshaguma: Maestria",
+      "ko": "패자의 증표【벽수】",
+      "zh-Hant": "霸者之證【闢獸】",
+      "zh-Hans": "霸者之证【辟兽】",
+      "ar": "دوشاغوما: رمز الإتقان",
+      "es-419": "Doshaguma: dominio"
+    }
+  },
+  {
+    "game_id": 4166,
+    "names": {
+      "ja": "アイルーテディ・花舞",
+      "en": "Sakura Felyne Teddy",
+      "fr": "Peluche Felyne sakura",
+      "it": "Orso sakura F",
+      "de": "Felynen-Teddy (Sakura)",
+      "es": "Peluche Felyne Sakura",
+      "ru": "Плюшевый котт (сакура)",
+      "pl": "Sakurowy pluszowy felin",
+      "pt-BR": "Pelúcia de Felyno Cerejeira",
+      "ko": "아이루 테디/화무",
+      "zh-Hant": "泰迪艾路・花舞",
+      "zh-Hans": "泰迪艾露猫・花舞",
+      "ar": "دمية فيلاين ساكورا محشوة",
+      "es-419": "Peluche Felyne Sakura"
+    }
+  },
+  {
+    "game_id": 4243,
+    "names": {
+      "ja": "フェアリーライト・白輝",
+      "en": "White Fairy Light",
+      "fr": "Lumière féérique blanche",
+      "it": "Luce di fata bianca",
+      "de": "Feenlicht (weiß)",
+      "es": "Luz feérica blanca",
+      "ru": "Белый фонарик",
+      "pl": "Białe światełko",
+      "pt-BR": "Luz Fádica Branca",
+      "ko": "페어리라이트 화이트",
+      "zh-Hant": "妖精之光・白輝",
+      "zh-Hans": "精灵之光·白辉",
+      "ar": "ضوء الجنية الأبيض",
+      "es-419": "Luz feérica blanca"
+    }
+  },
+  {
+    "game_id": 5771,
+    "names": {
+      "ja": "ラギアのぬいぐるみ",
+      "en": "Lagiacrus Plushie",
+      "fr": "Peluche Lagiacrus",
+      "it": "Pupazzo Lagiacrus",
+      "de": "Plüsch-Lagi",
+      "es": "Peluche Lagiacrus",
+      "ru": "Плюшевый лагиакрус",
+      "pl": "Pluszowy Lagiacrus",
+      "pt-BR": "Pelúcia de Lagiacrus",
+      "ko": "라기아 인형",
+      "zh-Hant": "海龍玩偶",
+      "zh-Hans": "海龙玩偶",
+      "ar": "دمية لاغياكروس",
+      "es-419": "Peluche Lagiacrus"
+    }
+  },
+  {
+    "game_id": 5828,
+    "names": {
+      "ja": "ぷくぷくハチミツ",
+      "en": "Floating Honey",
+      "fr": "Miel flottant",
+      "it": "Miele fluttuante",
+      "de": "Schwebender Honig",
+      "es": "Miel flotante",
+      "ru": "Парящий мёд",
+      "pl": "Latający miód",
+      "pt-BR": "Mel Flutuante",
+      "ko": "둥실둥실 벌꿀",
+      "zh-Hant": "浮浮蜂蜜",
+      "zh-Hans": "浮浮蜂蜜",
+      "ar": "العسل العائم",
+      "es-419": "Miel flotante"
+    }
+  },
+  {
+    "game_id": 6327,
+    "names": {
+      "ja": "希望のスカーフＧ・桜",
+      "en": "Hope Scarf G: Pink/Black",
+      "fr": "Foulard d'espoir G : rose/noir",
+      "it": "Speranza G: rosa/nera",
+      "de": "Hoffnung G: Sakura",
+      "es": "Pañuelo G: Rosa/negro",
+      "ru": "Шарф надежды G: роз.-чёрн.",
+      "pl": "Szal nadziei G: róż-czerń",
+      "pt-BR": "Esperança G: Rosa/Preto",
+      "ko": "희망의 스카프G/벚꽃",
+      "zh-Hant": "希望領巾G・櫻紅",
+      "zh-Hans": "希望领巾G·樱",
+      "ar": "وشاح الأمل G: وردي/أسود",
+      "es-419": "Pañuelo G: Rosa/negro"
+    }
+  },
+  {
+    "game_id": 7066,
+    "names": {
+      "ja": "ジョイントドスベイト",
+      "en": "Tuff Joint Bait",
+      "fr": "Appât articulé",
+      "it": "Esche congiunte tufo",
+      "de": "Basaltgelenkköder",
+      "es": "Cebo de toba articulable",
+      "ru": "Составная наживка",
+      "pl": "Tufowa przynęta",
+      "pt-BR": "Isca Resistente",
+      "ko": "조인트 도스베이트",
+      "zh-Hant": "多節大擬餌",
+      "zh-Hans": "联装大拟饵",
+      "ar": "طُعم الحجر البركاني المفصلي",
+      "es-419": "Cebo de toba articulable"
+    }
+  },
+  {
+    "game_id": 8496,
+    "names": {
+      "ja": "フェアリーライト・青輝",
+      "en": "Blue Fairy Light",
+      "fr": "Lumière féérique bleue",
+      "it": "Luce di fata blu",
+      "de": "Feenlicht (blau)",
+      "es": "Luz feérica azul",
+      "ru": "Синий фонарик",
+      "pl": "Niebieskie światełko",
+      "pt-BR": "Luz Fádica Azul",
+      "ko": "페어리라이트 블루",
+      "zh-Hant": "妖精之光・青輝",
+      "zh-Hans": "精灵之光·青辉",
+      "ar": "ضوء الجنية الأزرق",
+      "es-419": "Luz feérica azul"
+    }
+  },
+  {
+    "game_id": 8623,
+    "names": {
+      "ja": "くろねこの土鈴",
+      "en": "Black Cat Bell",
+      "fr": "Chat noir à grelot",
+      "it": "Campanella gatto nero",
+      "de": "Katzenglocke (schwarz)",
+      "es": "Cascabel de gato negro",
+      "ru": "Чёрный кот-колокольчик",
+      "pl": "Czarny koci dzwonek",
+      "pt-BR": "Sino de Gato Preto",
+      "ko": "검은고양이 방울",
+      "zh-Hant": "黑貓土鈴",
+      "zh-Hans": "黑猫陶铃",
+      "ar": "جرس قطة سوداء",
+      "es-419": "Cascabel de gato negro"
+    }
+  },
+  {
+    "game_id": 10426,
+    "names": {
+      "ja": "踊火の精霊・白焔",
+      "en": "White Flamefete Spirit",
+      "fr": "Esprit des flammes blanc",
+      "it": "Spirito Festardente bianco",
+      "de": "Feuergeist (weiß)",
+      "es": "Espíritu chisparranda blanco",
+      "ru": "Белый дух Хоровода огней",
+      "pl": "Biały duch Tańczącego Ognia",
+      "pt-BR": "Flamalma Branca",
+      "ko": "용화의 정령/화이트",
+      "zh-Hant": "火蹈精靈・白焰",
+      "zh-Hans": "踊火精灵・白焰",
+      "ar": "روح مهرجان اللهب الأبيض",
+      "es-419": "Espíritu chisparranda blanco"
+    }
+  },
+  {
+    "game_id": 10471,
+    "names": {
+      "ja": "勇者の証【煌雷竜】",
+      "en": "Rey Dau: Mark of Bravery",
+      "fr": "Rey Dau : gage de bravoure",
+      "it": "Rey Dau: Marchio audacia",
+      "de": "Rey Dau: Mut",
+      "es": "Rey Dau: Señal de valor",
+      "ru": "Рей дау: знак героя",
+      "pl": "Rey Dau: Symbol bohatera",
+      "pt-BR": "Rey Dau: Bravura",
+      "ko": "용사의 증표【황뢰룡】",
+      "zh-Hant": "勇者之證【煌雷龍】",
+      "zh-Hans": "勇者之证【煌雷龙】",
+      "ar": "راي داو: رمز الشجاعة",
+      "es-419": "Rey Dau: valor"
+    }
+  },
+  {
+    "game_id": 11148,
+    "names": {
+      "ja": "フェアリーライト・桃輝",
+      "en": "Pink Fairy Light",
+      "fr": "Lumière féérique rose",
+      "it": "Luce di fata rosa",
+      "de": "Feenlicht (pink)",
+      "es": "Luz feérica rosa",
+      "ru": "Розовый фонарик",
+      "pl": "Różowe światełko",
+      "pt-BR": "Luz Fádica Rosa",
+      "ko": "페어리라이트 핑크",
+      "zh-Hant": "妖精之光・桃輝",
+      "zh-Hans": "精灵之光·桃辉",
+      "ar": "ضوء الجنية الزهري",
+      "es-419": "Luz feérica rosa"
+    }
+  },
+  {
+    "game_id": 11189,
+    "names": {
+      "ja": "タルコロトロフィー",
+      "en": "Barrel Bowling Trophy",
+      "fr": "Trophée Bowling baril",
+      "it": "Trofeo Fusti rotolanti",
+      "de": "Fass-Bowling-Trophäe",
+      "es": "Trofeo Bolera Barril",
+      "ru": "Приз за боулинг",
+      "pl": "Trofeum za kręgle becz.",
+      "pt-BR": "Troféu de Boliche de Barril",
+      "ko": "나무통 굴리기 트로피",
+      "zh-Hant": "滾滾木桶獎盃",
+      "zh-Hans": "滚桶挑战奖杯",
+      "ar": "جائزة بولينغ البراميل",
+      "es-419": "Trofeo de bolos"
+    }
+  },
+  {
+    "game_id": 11812,
+    "names": {
+      "ja": "ウタイズクバルーン・泡",
+      "en": "Strigible: Amstrigian",
+      "fr": "Ballon amstrigien",
+      "it": "Palloncino strigiorana",
+      "de": "Amphikauz-Ballon",
+      "es": "Globo amstrigiano",
+      "ru": "Стрижабль (амстриган)",
+      "pl": "Balonik: amstryg",
+      "pt-BR": "Anstrígio Balão",
+      "ko": "노래 부엉이 벌룬/버블",
+      "zh-Hant": "歌鴞氣球・泡",
+      "zh-Hans": "歌鸮气球·泡",
+      "ar": "بالون أمستريجيان",
+      "es-419": "Strigible: Amstrigiano"
+    }
+  },
+  {
+    "game_id": 11993,
+    "names": {
+      "ja": "ぷくぷくキラキラ",
+      "en": "Floating Sparkles",
+      "fr": "Scintillements flottants",
+      "it": "Scintille fluttuanti",
+      "de": "Schwebender Glitzer",
+      "es": "Brillos flotantes",
+      "ru": "Парящие блёстки",
+      "pl": "Latające iskierki",
+      "pt-BR": "Faíscas Flutuantes",
+      "ko": "둥실둥실 반짝반짝",
+      "zh-Hant": "浮浮閃星",
+      "zh-Hans": "浮浮闪星",
+      "ar": "البَريق العائم",
+      "es-419": "Destellos flotantes"
+    }
+  },
+  {
+    "game_id": 12812,
+    "names": {
+      "ja": "テンタクルエギ",
+      "en": "Tentacle Jig",
+      "fr": "Leurre tentacule",
+      "it": "Esca tentacoli",
+      "de": "Tentakelköder",
+      "es": "Tentacular",
+      "ru": "Приманка-щупальце",
+      "pl": "Przynęta mackowa",
+      "pt-BR": "Isca Tentacular",
+      "ko": "텐터클미끼",
+      "zh-Hant": "觸手餌木",
+      "zh-Hans": "触手拟饵",
+      "ar": "طُعم المجس الاصطناعي",
+      "es-419": "Cebo tentacular"
+    }
+  },
+  {
+    "game_id": 12990,
+    "names": {
+      "ja": "ブランカちゃん人形",
+      "en": "Blanka-Chan Doll",
+      "fr": "Poupée Blanka-chan",
+      "it": "Pupazzo di Blanka-chan",
+      "de": "Blanka-Chan-Puppe",
+      "es": "Muñeco de Blanka-chan",
+      "ru": "Кукла Blanka-Chan",
+      "pl": "Lalka Blanka-chan",
+      "pt-BR": "Pelúcia do Blanka-chan",
+      "ko": "블랑카짱 인형",
+      "zh-Hant": "小小布蘭卡玩偶",
+      "zh-Hans": "小布兰卡娃娃",
+      "ar": "دمية Blanka-Chan",
+      "es-419": "Muñeco de Blanka-chan"
+    }
+  },
+  {
+    "game_id": 14467,
+    "names": {
+      "ja": "ぷくぷくこんがり肉",
+      "en": "Floating Well-done Steaks",
+      "fr": "Steaks flottants",
+      "it": "Bistecche fluttuanti",
+      "de": "Schwebende Steaks",
+      "es": "Filetes flotantes",
+      "ru": "Парящие стейки",
+      "pl": "Latające dobrze wysmażone steki",
+      "pt-BR": "Bifes Flutuantes",
+      "ko": "둥실둥실 잘 익은 고기",
+      "zh-Hant": "浮浮全熟肉",
+      "zh-Hans": "浮浮烤熟的肉",
+      "ar": "شرائح لحم مطهوة عائمة",
+      "es-419": "Filetes flotantes"
+    }
+  },
+  {
+    "game_id": 15071,
+    "names": {
+      "ja": "アイルー・チョコレートミント",
+      "en": "Felyne Mint Chocolate",
+      "fr": "Choco menthe Felyne",
+      "it": "Cioccomenta Felyne",
+      "de": "F Schoko-Minze",
+      "es": "Chocolate con menta Felyne",
+      "ru": "Мята и шоколад (К)",
+      "pl": "Felińska czekoladka miętowa",
+      "pt-BR": "Chocomenta Felyno",
+      "ko": "아이루 초코민트",
+      "zh-Hant": "艾路・巧克力薄荷",
+      "zh-Hans": "艾露猫：薄荷巧克力",
+      "ar": "فيلاين: شوكولاتة بالنعناع",
+      "es-419": "Chocomenta Felyne"
+    }
+  },
+  {
+    "game_id": 15762,
+    "names": {
+      "ja": "挑戦者の証【泡狐竜】",
+      "en": "Mizutsune: Mark of Contest",
+      "fr": "Mizutsune : gage de lutte",
+      "it": "Mizutsune: M. sfida",
+      "de": "Mizutsune: Wagnis",
+      "es": "Mizutsune: Señal de lucha",
+      "ru": "Мидзуцунэ: знак претендента",
+      "pl": "Mizutsune: Symbol pojedynku",
+      "pt-BR": "Mizutsune: Contestação",
+      "ko": "도전자의 증표【포호룡】",
+      "zh-Hant": "挑戰者之證【泡狐龍】",
+      "zh-Hans": "挑战者之证【泡狐龙】",
+      "ar": "ميزوتسوني: رمز المنافسة",
+      "es-419": "Mizutsune: lucha"
+    }
+  },
+  {
+    "game_id": 16045,
+    "names": {
+      "ja": "黄金バグヘッド",
+      "en": "Golden Bughead",
+      "fr": "Insecte doré",
+      "it": "Testa d'insetto dorato",
+      "de": "Goldkäferkopf",
+      "es": "Bicho dorado",
+      "ru": "Золотой жучок",
+      "pl": "Złota pleśniawka",
+      "pt-BR": "Cabeça de Inseto Dourado",
+      "ko": "황금 버그헤드",
+      "zh-Hant": "黃金蟲頭",
+      "zh-Hans": "黄金虫头",
+      "ar": "رأس الحشرة الذهبي",
+      "es-419": "Bicho dorado"
+    }
+  },
+  {
+    "game_id": 16246,
+    "names": {
+      "ja": "汎用ウッドミノー",
+      "en": "Common Wood Minnow",
+      "fr": "Vairon en bois multiusage",
+      "it": "Esca di legno comune",
+      "de": "Holzfischchen",
+      "es": "Piscardo de madera común",
+      "ru": "Деревянный гольян",
+      "pl": "Zwykła drewniana błystka",
+      "pt-BR": "Isca de Madeira Comum",
+      "ko": "범용 우드 미노",
+      "zh-Hant": "通用木製鰷擬餌",
+      "zh-Hans": "通用木制鲦鱼饵",
+      "ar": "سمكة الخشب الشائعة",
+      "es-419": "Pececillo de madera común"
+    }
+  },
+  {
+    "game_id": 16560,
+    "names": {
+      "ja": "フェアリーライト・紫輝",
+      "en": "Violet Fairy Light",
+      "fr": "Lumière féérique violette",
+      "it": "Luce di fata viola",
+      "de": "Feenlicht (violett)",
+      "es": "Luz feérica violeta",
+      "ru": "Фиолетовый фонарик",
+      "pl": "Fioletowe światełko",
+      "pt-BR": "Luz Fádica Violeta",
+      "ko": "페어리라이트 퍼플",
+      "zh-Hant": "妖精之光・紫輝",
+      "zh-Hans": "精灵之光·紫辉",
+      "ar": "ضوء الجنية البنفسجي",
+      "es-419": "Luz feérica violeta"
+    }
+  },
+  {
+    "game_id": 16629,
+    "names": {
+      "ja": "覇者の証【煌雷竜】",
+      "en": "Rey Dau: Mark of Mastery",
+      "fr": "Rey Dau : gage de maîtrise",
+      "it": "Rey Dau: Marchio maestria",
+      "de": "Rey Dau: Dominanz",
+      "es": "Rey Dau: Señal de dominio",
+      "ru": "Рей дау: знак мастера",
+      "pl": "Rey Dau: Symbol mistrza",
+      "pt-BR": "Ray Dau: Maestria",
+      "ko": "패자의 증표【황뢰룡】",
+      "zh-Hant": "霸者之證【煌雷龍】",
+      "zh-Hans": "霸者之证【煌雷龙】",
+      "ar": "راي داو: رمز الإتقان",
+      "es-419": "Rey Dau: dominio"
+    }
+  },
+  {
+    "game_id": 17328,
+    "names": {
+      "ja": "踊火の精霊・紫焔",
+      "en": "Violet Flamefete Spirit",
+      "fr": "Esprit des flammes violet",
+      "it": "Spirito Festardente viola",
+      "de": "Feuergeist (violett)",
+      "es": "Espíritu chisparranda morado",
+      "ru": "Фиол. дух Хоровода огней",
+      "pl": "Fioletowy duch Tańczącego Ognia",
+      "pt-BR": "Flamalma Violeta",
+      "ko": "용화의 정령/바이올렛",
+      "zh-Hant": "火蹈精靈・紫焰",
+      "zh-Hans": "踊火精灵・紫焰",
+      "ar": "روح مهرجان اللهب البنفسجي",
+      "es-419": "Espíritu chisparranda morado"
+    }
+  },
+  {
+    "game_id": 17601,
+    "names": {
+      "ja": "背伸びくろねこハニワ",
+      "en": "Stretched Black Cat",
+      "fr": "Chat noir étiré",
+      "it": "Gatto nero rilassato",
+      "de": "Schwarze Katze (lang)",
+      "es": "Gato negro estirado",
+      "ru": "Потягивающийся чёрный кот",
+      "pl": "Rozciągnięty czarny kot",
+      "pt-BR": "Gato Preto Alongado",
+      "ko": "길쭉 검은 고양이 모형",
+      "zh-Hant": "長長黑貓陶偶",
+      "zh-Hans": "长身黑猫陶俑",
+      "ar": "قطة سوداء متمطّطة",
+      "es-419": "Gato negro estirándose"
+    }
+  },
+  {
+    "game_id": 18323,
+    "names": {
+      "ja": "ぷくぷくハート",
+      "en": "Floating Hearts",
+      "fr": "Cœurs flottants",
+      "it": "Cuori fluttuanti",
+      "de": "Schwebende Herzen",
+      "es": "Corazones flotantes",
+      "ru": "Парящие сердечки",
+      "pl": "Latające serca",
+      "pt-BR": "Corações Flutuantes",
+      "ko": "둥실둥실 하트",
+      "zh-Hant": "浮浮愛心",
+      "zh-Hans": "浮浮爱心",
+      "ar": "القلوب العائمة",
+      "es-419": "Corazones flotantes"
+    }
+  },
+  {
+    "game_id": 18700,
+    "names": {
+      "ja": "挑戦者の証【煌雷竜】",
+      "en": "Rey Dau: Mark of Contest",
+      "fr": "Rey Dau : gage de lutte",
+      "it": "Rey Dau: Marchio sfida",
+      "de": "Rey Dau: Wagnis",
+      "es": "Rey Dau: Señal de lucha",
+      "ru": "Рей дау: знак претендента",
+      "pl": "Rey Dau: Symbol pojedynku",
+      "pt-BR": "Rey Dau: Contestação",
+      "ko": "도전자의 증표【황뢰룡】",
+      "zh-Hant": "挑戰者之證【煌雷龍】",
+      "zh-Hans": "挑战者之证【煌雷龙】",
+      "ar": "راي داو: رمز المنافسة",
+      "es-419": "Rey Dau: lucha"
+    }
+  },
+  {
+    "game_id": 19212,
+    "names": {
+      "ja": "イクチスリグ",
+      "en": "Duster Rig",
+      "fr": "Leurre stellardine",
+      "it": "Esca polvere",
+      "de": "Stäuberköder",
+      "es": "Cebo pluma",
+      "ru": "Приманка-метёлка",
+      "pl": "Przywieszka z piór",
+      "pt-BR": "Iscaleiro",
+      "ko": "물고기리그",
+      "zh-Hant": "星屑魚擬餌",
+      "zh-Hans": "星屑鱼拟饵",
+      "ar": "عدة صيد داستَر",
+      "es-419": "Cebo polvín"
+    }
+  },
+  {
+    "game_id": 19254,
+    "names": {
+      "ja": "ウタイズクバルーン・金",
+      "en": "Strigible: Gold",
+      "fr": "Ballon strigien doré",
+      "it": "Palloncino ororana",
+      "de": "Goldkauz-Ballon",
+      "es": "Globo dorado",
+      "ru": "Стрижабль (золото)",
+      "pl": "Balonik: złoty",
+      "pt-BR": "Ourostrígio Balão",
+      "ko": "노래 부엉이 벌룬/골드",
+      "zh-Hant": "歌鴞氣球・金",
+      "zh-Hans": "歌鸮气球·金",
+      "ar": "بالون ذهبي",
+      "es-419": "Strigible: Oro"
+    }
+  },
+  {
+    "game_id": 19481,
+    "names": {
+      "ja": "花舞のブーケ・彩",
+      "en": "Sakura Posy: Colorful",
+      "fr": "Bouquet coloré",
+      "it": "Bouquet sakura: colori",
+      "de": "Sakura-Strauß (bunt)",
+      "es": "Ramillete de Sakura: Colorido",
+      "ru": "Букет сакуры: яркий",
+      "pl": "Bukiet sakur: kolorowy",
+      "pt-BR": "Ramo de Cerejeira: Colorido",
+      "ko": "화무 부케/컬러풀",
+      "zh-Hant": "花舞捧花・彩",
+      "zh-Hans": "花舞之束・彩",
+      "ar": "باقة أزهار ساكورا: ملونة",
+      "es-419": "Sakura colorida"
+    }
+  },
+  {
+    "game_id": 19964,
+    "names": {
+      "ja": "しろねこの土鈴",
+      "en": "White Cat Bell",
+      "fr": "Chat blanc à grelot",
+      "it": "Campanella gatto bianco",
+      "de": "Katzenglocke (weiß)",
+      "es": "Cascabel de gato blanco",
+      "ru": "Белый кот-колокольчик",
+      "pl": "Biały koci dzwonek",
+      "pt-BR": "Sino de Gato Branco",
+      "ko": "하얀고양이 방울",
+      "zh-Hant": "白貓土鈴",
+      "zh-Hans": "白猫陶铃",
+      "ar": "جرس قطة بيضاء",
+      "es-419": "Cascabel de gato blanco"
+    }
+  },
+  {
+    "game_id": 20360,
+    "names": {
+      "ja": "てくてくフワフワクイナ",
+      "en": "Trot-along Crake",
+      "fr": "Marouette trotteuse",
+      "it": "Rallus da compagnia",
+      "de": "Flauschhuhn-Begleiter",
+      "es": "Carrao trotador",
+      "ru": "Семенящий коростель",
+      "pl": "Podążający derkacz",
+      "pt-BR": "Saracura Trotadora",
+      "ko": "터벅터벅 폭신폭신 뜸부기",
+      "zh-Hant": "踱步柔毛秧雞",
+      "zh-Hans": "小踱柔毛秧鸡",
+      "ar": "الكريك المرح الخطى",
+      "es-419": "Carrao al trote"
+    }
+  },
+  {
+    "game_id": 20524,
+    "names": {
+      "ja": "ウタイズクバルーン・愛",
+      "en": "Strigible: Love",
+      "fr": "Ballon strigien d'amour",
+      "it": "Palloncino amorana",
+      "de": "Liebeskauz-Ballon",
+      "es": "Globo amoroso",
+      "ru": "Стрижабль (любовь)",
+      "pl": "Balonik: miłość",
+      "pt-BR": "Amorstrígio Balão",
+      "ko": "노래 부엉이 벌룬/러브",
+      "zh-Hant": "歌鴞氣球・愛",
+      "zh-Hans": "歌鸮气球·爱",
+      "ar": "بالون الحب",
+      "es-419": "Strigible: Amor"
+    }
+  },
+  {
+    "game_id": 21673,
+    "names": {
+      "ja": "ぷくぷく回復薬",
+      "en": "Floating Potions",
+      "fr": "Potions flottantes",
+      "it": "Pozioni fluttuanti",
+      "de": "Schwebende Tränke",
+      "es": "Pociones flotantes",
+      "ru": "Парящие зелья",
+      "pl": "Latające mikstury",
+      "pt-BR": "Poções Flutuantes",
+      "ko": "둥실둥실 회복약",
+      "zh-Hant": "浮浮回復藥",
+      "zh-Hans": "浮浮回复药",
+      "ar": "الطلاسم العائمة",
+      "es-419": "Pociones flotantes"
+    }
+  },
+  {
+    "game_id": 23167,
+    "names": {
+      "ja": "ウタイズクバルーン・美",
+      "en": "Strigible: Hymstrigian",
+      "fr": "Ballon hymstrigien",
+      "it": "Palloncino cantarana",
+      "de": "Operettenkauz-Ballon",
+      "es": "Globo imstrigiano",
+      "ru": "Стрижабль (химстриган)",
+      "pl": "Balonik: hymstryg",
+      "pt-BR": "Hinostrígio Balão",
+      "ko": "노래 부엉이 벌룬/뷰티",
+      "zh-Hant": "歌鴞氣球・美",
+      "zh-Hans": "歌鸮气球·美",
+      "ar": "بالون هيمستريجيان",
+      "es-419": "Strigible: Himstrigiano"
+    }
+  },
+  {
+    "game_id": 23247,
+    "names": {
+      "ja": "踊火の精霊・桃焔",
+      "en": "Pink Flamefete Spirit",
+      "fr": "Esprit des flammes rose",
+      "it": "Spirito Festardente rosa",
+      "de": "Feuergeist (pink)",
+      "es": "Espíritu chisparranda rosa",
+      "ru": "Розов. дух Хоровода огней",
+      "pl": "Różowy duch Tańczącego Ognia",
+      "pt-BR": "Flamalma Rosa",
+      "ko": "용화의 정령/핑크",
+      "zh-Hant": "火蹈精靈・桃焰",
+      "zh-Hans": "踊火精灵・桃焰",
+      "ar": "روح مهرجان اللهب الوردي",
+      "es-419": "Espíritu chisparranda rosa"
+    }
+  },
+  {
+    "game_id": 23873,
+    "names": {
+      "ja": "アイルー・ストロベリー",
+      "en": "Felyne Strawberry",
+      "fr": "Fraise Felyne",
+      "it": "Fragola Felyne",
+      "de": "F Erdbeere",
+      "es": "Fresa Felyne",
+      "ru": "Клубника (К)",
+      "pl": "Felińska truskawka",
+      "pt-BR": "Morango Felyno",
+      "ko": "아이루 스트로베리",
+      "zh-Hant": "艾路・草莓",
+      "zh-Hans": "艾露猫：草莓",
+      "ar": "فيلاين فراولة",
+      "es-419": "Fresa Felyne"
+    }
+  },
+  {
+    "game_id": 25269,
+    "names": {
+      "ja": "挑戦者の証【闢獣】",
+      "en": "Doshaguma: Mark of Contest",
+      "fr": "Doshaguma : gage de lutte",
+      "it": "Dosha: Marchio sfida",
+      "de": "Dosha: Wagnis",
+      "es": "Dosha: Señal de lucha",
+      "ru": "Дошагума: знак претендента",
+      "pl": "Dosha: Symbol pojedynku",
+      "pt-BR": "Doshaguma: Contestação",
+      "ko": "도전자의 증표【벽수】",
+      "zh-Hant": "挑戰者之證【闢獸】",
+      "zh-Hans": "挑战者之证【辟兽】",
+      "ar": "دوشاغوما: رمز المنافسة",
+      "es-419": "Doshaguma: lucha"
+    }
+  },
+  {
+    "game_id": 25538,
+    "names": {
+      "ja": "アイルー・キャラメル",
+      "en": "Felyne Caramel",
+      "fr": "Caramel Felyne",
+      "it": "Caramello Felyne",
+      "de": "F Karamell",
+      "es": "Caramelo Felyne",
+      "ru": "Карамель (К)",
+      "pl": "Feliński karmel",
+      "pt-BR": "Caramelo Felyno",
+      "ko": "아이루 캬라멜",
+      "zh-Hant": "艾路・焦糖",
+      "zh-Hans": "艾露猫：焦糖",
+      "ar": "فيلاين كراميل",
+      "es-419": "Caramelo Felyne"
+    }
+  },
+  {
+    "game_id": 25832,
+    "names": {
+      "ja": "挑戦者の証【波衣竜】",
+      "en": "Uth Duna: Mark of Contest",
+      "fr": "Uth Duna : gage de lutte",
+      "it": "Uth Duna: M. sfida",
+      "de": "Uth Duna: Wagnis",
+      "es": "Uth Duna: Señal de lucha",
+      "ru": "Ут дуна: знак претендента",
+      "pl": "Uth Duna: Symbol pojedynku",
+      "pt-BR": "Uth Duna: Contestação",
+      "ko": "도전자의 증표【파의룡】",
+      "zh-Hant": "挑戰者之證【波衣龍】",
+      "zh-Hans": "挑战者之证【波衣龙】",
+      "ar": "أوث دونا: رمز المنافسة",
+      "es-419": "Uth Duna: lucha"
+    }
+  },
+  {
+    "game_id": 26198,
+    "names": {
+      "ja": "ウタイズクバルーン・彩",
+      "en": "Strigible: Color",
+      "fr": "Ballon strigien coloré",
+      "it": "Palloncino colorana",
+      "de": "Popkauz-Ballon",
+      "es": "Globo colorido",
+      "ru": "Стрижабль (колорит)",
+      "pl": "Balonik: barwy",
+      "pt-BR": "Colostrígio Balão",
+      "ko": "노래 부엉이 벌룬/비비드",
+      "zh-Hant": "歌鴞氣球・彩",
+      "zh-Hans": "歌鸮气球·彩",
+      "ar": "بالون ألوان",
+      "es-419": "Strigible: Color"
+    }
+  },
+  {
+    "game_id": 26281,
+    "names": {
+      "ja": "勇者の証【闢獣】",
+      "en": "Doshaguma: Mark of Bravery",
+      "fr": "Doshaguma : gage de bravoure",
+      "it": "Dosha: Marchio valore",
+      "de": "Dosha: Mut",
+      "es": "Dosha: Señal de valor",
+      "ru": "Дошагума: знак героя",
+      "pl": "Dosha: Symbol odwagi",
+      "pt-BR": "Doshaguma: Bravura",
+      "ko": "용사의 증표【벽수】",
+      "zh-Hant": "勇者之證【闢獸】",
+      "zh-Hans": "勇者之证【辟兽】",
+      "ar": "دوشاغوما: رمز الشجاعة",
+      "es-419": "Doshaguma: valor"
+    }
+  },
+  {
+    "game_id": 26865,
+    "names": {
+      "ja": "覇者の証【泡狐竜】",
+      "en": "Mizutsune: Mark of Mastery",
+      "fr": "Mizutsune : gage de maîtrise",
+      "it": "Mizutsune: M. maestria",
+      "de": "Mizutsune: Dominanz",
+      "es": "Mizutsune: Señal de dominio",
+      "ru": "Мидзуцунэ: знак мастера",
+      "pl": "Mizutsune: Symbol mistrzostwa",
+      "pt-BR": "Mizutsune: Maestria",
+      "ko": "패자의 증표【포호룡】",
+      "zh-Hant": "霸者之證【泡狐龍】",
+      "zh-Hans": "霸者之证【泡狐龙】",
+      "ar": "ميزوتسوني: رمز الإتقان",
+      "es-419": "Mizutsune: dominio"
+    }
+  },
+  {
+    "game_id": 27000,
+    "names": {
+      "ja": "勇者の証【泡狐竜】",
+      "en": "Mizutsune: Mark of Bravery",
+      "fr": "Mizutsune : gage de bravoure",
+      "it": "Mizutsune: M. valore",
+      "de": "Mizutsune: Mut",
+      "es": "Mizutsune: Señal de valor",
+      "ru": "Мидзуцунэ: знак героя",
+      "pl": "Mizutsune: Symbol odwagi",
+      "pt-BR": "Mizutsune: Bravura",
+      "ko": "용사의 증표【포호룡】",
+      "zh-Hant": "勇者之證【泡狐龍】",
+      "zh-Hans": "勇者之证【泡狐龙】",
+      "ar": "ميزوتسوني: رمز الشجاعة",
+      "es-419": "Mizutsune: valor"
+    }
+  },
+  {
+    "game_id": 27172,
+    "names": {
+      "ja": "タルコロストラップ",
+      "en": "Barrel Bowling Strap",
+      "fr": "Gri-gri Bowling baril",
+      "it": "Cordino Fusti rotolanti",
+      "de": "Fass-Bowling-Kordel",
+      "es": "Colgante Bolera Barril",
+      "ru": "Ремешок за боулинг",
+      "pl": "Kręglowy wisiorek",
+      "pt-BR": "Enfeite de Boliche de Barril",
+      "ko": "나무통 굴리기 스트랩",
+      "zh-Hant": "滾滾木桶飾帶",
+      "zh-Hans": "滚桶挑战饰带",
+      "ar": "شريط بولينغ البراميل",
+      "es-419": "Colgante de bolos"
+    }
+  },
+  {
+    "game_id": 27357,
+    "names": {
+      "ja": "エメラルドチャター",
+      "en": "Emerald Jitterbait",
+      "fr": "Frétileurre émeraude",
+      "it": "Tremoresca smeraldina",
+      "de": "Smaragd-Zitterköder",
+      "es": "Cebo esmeralda fluctuante",
+      "ru": "Изумрудная наживка",
+      "pl": "Szmaragdowy klekot",
+      "pt-BR": "Tremorisca Esmeralda",
+      "ko": "에메랄드 채터",
+      "zh-Hant": "綠寶石擬餌",
+      "zh-Hans": "祖母绿拟饵",
+      "ar": "طُعم زمردي أخضر",
+      "es-419": "Cebo esmeralda fluctuante"
+    }
+  },
+  {
+    "game_id": 27581,
+    "names": {
+      "ja": "覇者の証【波衣竜】",
+      "en": "Uth Duna: Mark of Mastery",
+      "fr": "Uth Duna : gage de maîtrise",
+      "it": "Uth Duna: M. maestria",
+      "de": "Uth Duna: Dominanz",
+      "es": "Uth Duna: Señal de dominio",
+      "ru": "Ут дуна: знак мастера",
+      "pl": "Uth Duna: Symbol mistrzostwa",
+      "pt-BR": "Uth Duna: Maestria",
+      "ko": "패자의 증표【파의룡】",
+      "zh-Hant": "霸者之證【波衣龍】",
+      "zh-Hans": "霸者之证【波衣龙】",
+      "ar": "أوث دونا: رمز الإتقان",
+      "es-419": "Uth Duna: dominio"
+    }
+  },
+  {
+    "game_id": 28140,
+    "names": {
+      "ja": "踊火の精霊・赤焔",
+      "en": "Red Flamefete Spirit",
+      "fr": "Esprit des flammes rouge",
+      "it": "Spirito Festardente rosso",
+      "de": "Feuergeist (rot)",
+      "es": "Espíritu chisparranda rojo",
+      "ru": "Красн. дух Хоровода огней",
+      "pl": "Czerwony duch Tańczącego Ognia",
+      "pt-BR": "Flamalma Vermelha",
+      "ko": "용화의 정령/레드",
+      "zh-Hant": "火蹈精靈・赤焰",
+      "zh-Hans": "踊火精灵・赤焰",
+      "ar": "روح مهرجان اللهب الأحمر",
+      "es-419": "Espíritu chisparranda rojo"
+    }
+  },
+  {
+    "game_id": 28676,
+    "names": {
+      "ja": "ぷくぷくファンシー",
+      "en": "Floating Doodles",
+      "fr": "Gribouillis flottants",
+      "it": "Disegnini fluttuanti",
+      "de": "Schwebendes Gekritzel",
+      "es": "Dibujillos flotantes",
+      "ru": "Парящие узоры",
+      "pl": "Latające gryzmoły",
+      "pt-BR": "Rabiscos Flutuantes",
+      "ko": "둥실둥실 팬시",
+      "zh-Hant": "浮浮幻想",
+      "zh-Hans": "浮浮幻想",
+      "ar": "الخربشات العائمة",
+      "es-419": "Garabatos flotantes"
+    }
+  },
+  {
+    "game_id": 29333,
+    "names": {
+      "ja": "アイルーテディ・踊火",
+      "en": "Flamefete Felyne Teddy",
+      "fr": "Peluche Felyne Fête des flammes",
+      "it": "Orsetto Festardente F",
+      "de": "Feuerfest-Felynen-Teddy",
+      "es": "Peluche Felyne de chisparranda",
+      "ru": "Плюш. котт Хоровода огней",
+      "pl": "Plu. felin Tańca Ognia",
+      "pt-BR": "Pelúcia de Felyno Flamafolia",
+      "ko": "아이루 테디/용화",
+      "zh-Hant": "艾路泰迪熊・火蹈",
+      "zh-Hans": "泰迪艾露猫・踊火",
+      "ar": "دمية فيلاين مهرجان اللهب",
+      "es-419": "Peluche de Chisparranda Felyne"
+    }
+  },
+  {
+    "game_id": 30420,
+    "names": {
+      "ja": "踊るくろねこハニワ",
+      "en": "Dancing Black Cat",
+      "fr": "Chat noir dansant",
+      "it": "Gatto nero danzante",
+      "de": "Schwarze Katze (tanzend)",
+      "es": "Gato negro bailarín",
+      "ru": "Танцующий чёрный кот",
+      "pl": "Tańczący czarny kot",
+      "pt-BR": "Gato Preto Dançante",
+      "ko": "춤추는 검은 고양이 모형",
+      "zh-Hant": "跳舞黑貓陶偶",
+      "zh-Hans": "跳舞的黑猫陶俑",
+      "ar": "القطة السوداء الراقصة",
+      "es-419": "Gato negro bailarín"
+    }
+  },
+  {
+    "game_id": 31998,
+    "names": {
+      "ja": "踊火の精霊・緑焔",
+      "en": "Green Flamefete Spirit",
+      "fr": "Esprit des flammes vert",
+      "it": "Spirito Festardente verde",
+      "de": "Feuergeist (grün)",
+      "es": "Espíritu chisparranda verde",
+      "ru": "Зелён. дух Хоровода огней",
+      "pl": "Zielony duch Tańczącego Ognia",
+      "pt-BR": "Flamalma Verde",
+      "ko": "용화의 정령/그린",
+      "zh-Hant": "火蹈精靈・綠焰",
+      "zh-Hans": "踊火精灵・绿焰",
+      "ar": "روح مهرجان اللهب الأخضر",
+      "es-419": "Espíritu chisparranda verde"
+    }
+  },
+  {
+    "game_id": 32289,
+    "names": {
+      "ja": "ウタイズクバルーン・踊",
+      "en": "Strigible: Cypurrpunk",
+      "fr": "Ballon cyberstrigien",
+      "it": "Palloncino cyberrana",
+      "de": "Cyberkauz-Ballon",
+      "es": "Globo cibermiau",
+      "ru": "Стрижабль (мурпанк)",
+      "pl": "Balonik: cybermiauk",
+      "pt-BR": "Ciberstrígio Balão",
+      "ko": "노래 부엉이 벌룬/댄스",
+      "zh-Hant": "歌鴞氣球・舞",
+      "zh-Hans": "歌鸮气球·舞",
+      "ar": "بالون سايبربنك",
+      "es-419": "Strigible: Cibermiau"
+    }
+  },
+  {
+    "game_id": 32639,
+    "names": {
+      "ja": "踊火の精霊・青焔",
+      "en": "Blue Flamefete Spirit",
+      "fr": "Esprit des flammes bleu",
+      "it": "Spirito Festardente blu",
+      "de": "Feuergeist (blau)",
+      "es": "Espíritu chisparranda azul",
+      "ru": "Синий дух Хоровода огней",
+      "pl": "Niebieski duch Tańczącego Ognia",
+      "pt-BR": "Flamalma Azul",
+      "ko": "용화의 정령/블루",
+      "zh-Hant": "火蹈精靈・藍焰",
+      "zh-Hans": "踊火精灵・蓝焰",
+      "ar": "روح مهرجان اللهب الأزرق",
+      "es-419": "Espíritu chisparranda azul"
+    }
+  },
+  {
+    "game_id": 110187568,
+    "names": {
+      "ja": "希望のスカーフＳ・赤緑",
+      "en": "Hope Scarf S: Red/Green",
+      "fr": "Foulard d'espoir S : rouge/vert",
+      "it": "Speranza S: rossa/verde",
+      "de": "Hoffnung S: Rot-Grün",
+      "es": "Pañuelo S: Rojo/verde",
+      "ru": "Шарф надежды S: крас.-зел.",
+      "pl": "S. nadziei S: bordo-zieleń",
+      "pt-BR": "Esperança S: Verm./Ver.",
+      "ko": "희망의 스카프S/적녹",
+      "zh-Hant": "希望領巾G・紅綠",
+      "zh-Hans": "希望领巾S·红绿",
+      "ar": "وشاح الأمل S: أحمر وأخضر",
+      "es-419": "Pañuelo S: Rojo/verde"
+    }
+  },
+  {
+    "game_id": 169973792,
+    "names": {
+      "ja": "感謝の証【アズズ】",
+      "en": "Azuz: Mark of Gratitude",
+      "fr": "Azuz : gage de gratitude",
+      "it": "Azuz: Gratitudine",
+      "de": "Azuz: Dankbarkeit",
+      "es": "Azuz: Señal de gratitud",
+      "ru": "Азуз: знак благодарности",
+      "pl": "Azuz: Symbol podzięki",
+      "pt-BR": "Azuz: Gratidão",
+      "ko": "감사의 증표【아즈즈】",
+      "zh-Hant": "感謝之證【阿茲茲】",
+      "zh-Hans": "感谢之证【阿孜兹】",
+      "ar": "آزوز: علامة الامتنان",
+      "es-419": "Azuz: Marca de gratitud"
+    }
+  },
+  {
+    "game_id": 292996192,
+    "names": {
+      "ja": "希望のスカーフ・青",
+      "en": "Hope Scarf: Light Blue",
+      "fr": "Foulard d'espoir : bleu",
+      "it": "Speranza: blu",
+      "de": "Hoffnung: Hellblau",
+      "es": "Pañuelo: Azul claro",
+      "ru": "Шарф надежды: голубой",
+      "pl": "Szal nadziei: jasnoniebieski",
+      "pt-BR": "Esperança: Azul Claro",
+      "ko": "희망의 스카프/청",
+      "zh-Hant": "希望領巾・藍",
+      "zh-Hans": "希望领巾·蓝",
+      "ar": "وشاح الأمل: أزرق",
+      "es-419": "Pañuelo: Celeste"
+    }
+  },
+  {
+    "game_id": 556851712,
+    "names": {
+      "ja": "飛鳥の風鈴",
+      "en": "Avian Wind Chime",
+      "fr": "Carillon à vent aviaire",
+      "it": "Campanella del volatile",
+      "de": "Vogel-Windspiel",
+      "es": "Campanilla aviar",
+      "ru": "Музыкальная подвеска «Птица»",
+      "pl": "Ptasi dzwoneczek wietrzny",
+      "pt-BR": "Sinos de Vento Aviários",
+      "ko": "나는 새의 풍경",
+      "zh-Hant": "飛鳥風鈴",
+      "zh-Hans": "飞鸟风铃",
+      "ar": "جرس الرياح للطائر المحلق",
+      "es-419": "Campanilla viento aviar"
+    }
+  },
+  {
+    "game_id": 858839744,
+    "names": {
+      "ja": "希望のスカーフＳ・白銀",
+      "en": "Hope Scarf S: Slate",
+      "fr": "Foulard d'espoir S : argent",
+      "it": "Speranza S: ardesia",
+      "de": "Hoffnung S: Silber",
+      "es": "Pañuelo S: Gris",
+      "ru": "Шарф надежды S: серый",
+      "pl": "Szal nadziei S: srebrny",
+      "pt-BR": "Esperança S: Cinza",
+      "ko": "희망의 스카프S/백은",
+      "zh-Hant": "希望領巾S・白銀",
+      "zh-Hans": "希望领巾S·白银",
+      "ar": "وشاح الأمل S: فضي",
+      "es-419": "Pañuelo S: Gris"
+    }
+  },
+  {
+    "game_id": 970988160,
+    "names": {
+      "ja": "希望のスカーフ・緑",
+      "en": "Hope Scarf: Green",
+      "fr": "Foulard d'espoir : vert",
+      "it": "Speranza: verde",
+      "de": "Hoffnung: Grün",
+      "es": "Pañuelo: Verde",
+      "ru": "Шарф надежды: зелёный",
+      "pl": "Szal nadziei: zielony",
+      "pt-BR": "Esperança: Verde",
+      "ko": "희망의 스카프/녹",
+      "zh-Hant": "希望領巾・綠",
+      "zh-Hans": "希望领巾·绿",
+      "ar": "وشاح الأمل: أخضر",
+      "es-419": "Pañuelo: Verde"
+    }
+  },
+  {
+    "game_id": 1425890176,
+    "names": {
+      "ja": "踊るしろねこハニワ",
+      "en": "Dancing White Cat",
+      "fr": "Chat blanc dansant",
+      "it": "Gatto bianco danzante",
+      "de": "Weiße Katze (tanzend)",
+      "es": "Gato blanco bailarín",
+      "ru": "Танцующий белый кот",
+      "pl": "Tańczący biały kot",
+      "pt-BR": "Gato Branco Dançante",
+      "ko": "춤추는 하얀 고양이 모형",
+      "zh-Hant": "跳舞白貓陶偶",
+      "zh-Hans": "跳舞的白猫陶俑",
+      "ar": "القطة البيضاء الراقصة",
+      "es-419": "Gato blanco bailarín"
+    }
+  },
+  {
+    "game_id": 1462510336,
+    "names": {
+      "ja": "希望のスカーフＧ・黒白",
+      "en": "Hope Scarf G: Monochrome",
+      "fr": "Foulard d'espoir G : noir/blanc",
+      "it": "Speranza G: tinta unita",
+      "de": "Hoffnung G: Mono",
+      "es": "Pañuelo G: Monocromo",
+      "ru": "Шарф надежды G: монохром",
+      "pl": "Szal nadziei G: monochrom",
+      "pt-BR": "Esperança G: Monocromo",
+      "ko": "희망의 스카프G/흑백",
+      "zh-Hant": "希望領巾G・黑白",
+      "zh-Hans": "希望领巾G·黑白",
+      "ar": "وشاح الأمل G: أحادي اللون",
+      "es-419": "Pañuelo G: Monocromático"
+    }
+  },
+  {
+    "game_id": 1469211008,
+    "names": {
+      "ja": "クックのぬいぐるみ",
+      "en": "Kut-Ku Plushie",
+      "fr": "Poupée Kut-Ku",
+      "it": "Pupazzo Kut-Ku",
+      "de": "Kut-Ku-Plüschtier",
+      "es": "Peluche de Kut-Ku",
+      "ru": "Плюшевый кут-ку",
+      "pl": "Pluszowy Kut-Ku",
+      "pt-BR": "Kut-Ku de Pelúcia",
+      "ko": "쿡크 인형",
+      "zh-Hant": "怪鳥玩偶",
+      "zh-Hans": "怪鸟玩偶",
+      "ar": "دمية كوت-كو",
+      "es-419": "Peluche de Kut-Ku"
+    }
+  },
+  {
+    "game_id": 1471458176,
+    "names": {
+      "ja": "希望のスカーフ・黄",
+      "en": "Hope Scarf: Saffron",
+      "fr": "Foulard d'espoir : safran",
+      "it": "Speranza: zafferano",
+      "de": "Hoffnung: Safran",
+      "es": "Pañuelo: Azafrán",
+      "ru": "Шарф надежды: шафран",
+      "pl": "Szal nadziei: szafran",
+      "pt-BR": "Esperança: Açafrão",
+      "ko": "희망의 스카프/황",
+      "zh-Hant": "希望領巾・黃",
+      "zh-Hans": "希望领巾·黄",
+      "ar": "وشاح الأمل: لون الزعفران",
+      "es-419": "Pañuelo: Azafrán"
+    }
+  },
+  {
+    "game_id": 1564614144,
+    "names": {
+      "ja": "希望のスカーフＳ・淡彩",
+      "en": "Hope Scarf S: Pastel",
+      "fr": "Foulard d'espoir S : pastel",
+      "it": "Speranza S: pastello",
+      "de": "Hoffnung S: Pastell",
+      "es": "Pañuelo S: Pastel",
+      "ru": "Шарф надежды S: пастельн.",
+      "pl": "Szal nadziei S: pastel",
+      "pt-BR": "Esperança S: Pastel",
+      "ko": "희망의 스카프S/담채",
+      "zh-Hant": "希望領巾S・淡彩",
+      "zh-Hans": "希望领巾S·淡彩",
+      "ar": "وشاح الأمل S: لون فاتح",
+      "es-419": "Pañuelo S: Pastel"
+    }
+  },
+  {
+    "game_id": 1609458688,
+    "names": {
+      "ja": "希望のスカーフＳ・橙",
+      "en": "Hope Scarf S: Marmalade",
+      "fr": "Foulard d'espoir S : cuivre",
+      "it": "Speranza: S: marmellata",
+      "de": "Hoffnung S: Herbst",
+      "es": "Pañuelo S: Mermelada",
+      "ru": "Шарф надежды S: мармелад",
+      "pl": "Szal nadziei S: dżem",
+      "pt-BR": "Esperança S: Marmelada",
+      "ko": "희망의 스카프S/주황",
+      "zh-Hant": "希望領巾S・橙",
+      "zh-Hans": "希望领巾S·橙",
+      "ar": "وشاح الأمل S: لون مربى البرتقال",
+      "es-419": "Pañuelo S: Mermelada"
+    }
+  },
+  {
+    "game_id": 1711301632,
+    "names": {
+      "ja": "アイルーテディ",
+      "en": "Stuffed Felyne Teddy",
+      "fr": "Peluche Felyne",
+      "it": "Orsacchiotto Felyne",
+      "de": "Felynen-Teddy",
+      "es": "Peluche de Felyne",
+      "ru": "Плюшевый котт",
+      "pl": "Pluszowy felin",
+      "pt-BR": "Felyno de Pelúcia",
+      "ko": "아이루 테디",
+      "zh-Hant": "泰迪艾路",
+      "zh-Hans": "泰迪艾露猫",
+      "ar": "دمية فيلاين محشوة",
+      "es-419": "Peluche de Felyne"
+    }
+  },
+  {
+    "game_id": 1763591424,
+    "names": {
+      "ja": "龍灯の翼飾り",
+      "en": "Dragontorch Wings",
+      "fr": "Ailes de la Torche draconique",
+      "it": "Ali della Fiaccola",
+      "de": "Drachenfackel-Flügel",
+      "es": "Alas de Tea Dracónida",
+      "ru": "Крылья Драконьего светоча",
+      "pl": "Skrzydła Smoczego Ognia",
+      "pt-BR": "Asas da Tocha Dracônica",
+      "ko": "용등의 날개 장식",
+      "zh-Hant": "龍燈翼飾",
+      "zh-Hans": "龙灯翼饰",
+      "ar": "أجنحة شعلة التنين",
+      "es-419": "Alas Antorcha Dragón"
+    }
+  },
+  {
+    "game_id": 1932250880,
+    "names": {
+      "ja": "希望のスカーフＧ・黒",
+      "en": "Hope Scarf G: Black",
+      "fr": "Foulard d'espoir G : noir",
+      "it": "Speranza G: nera",
+      "de": "Hoffnung G: Schwarz",
+      "es": "Pañuelo G: Negro",
+      "ru": "Шарф надежды G: чёрный",
+      "pl": "Szal nadziei G: czerń",
+      "pt-BR": "Esperança G: Preto",
+      "ko": "희망의 스카프G/흑",
+      "zh-Hant": "希望領巾G・黑",
+      "zh-Hans": "希望领巾G·黑",
+      "ar": "وشاح الأمل G: أسود",
+      "es-419": "Pañuelo G: Negro"
+    }
+  },
+  {
+    "game_id": 2022104192,
+    "names": {
+      "ja": "希望のスカーフＧ・黄黒",
+      "en": "Hope Scarf G: Hazard",
+      "fr": "Foulard d'espoir G : jaune/noir",
+      "it": "Speranza G: pericolo",
+      "de": "Hoffnung G: Gefahr",
+      "es": "Pañuelo G: Peligro",
+      "ru": "Шарф надежды G: опасность",
+      "pl": "Szal nadziei G: ryzykowny",
+      "pt-BR": "Esperança G: Perigo",
+      "ko": "희망의 스카프G/황흑",
+      "zh-Hant": "希望領巾G・黃黑",
+      "zh-Hans": "希望领巾G·黄黑",
+      "ar": "وشاح الأمل G: الخطر",
+      "es-419": "Pañuelo G: Peligro"
+    }
+  }
+]

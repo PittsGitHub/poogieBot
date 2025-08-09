@@ -1,4 +1,4 @@
-package handlers
+package mhwildhandlers
 
 import (
 	"encoding/json"
@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/PittsGitHub/poogieBot/internal/types"
+	"github.com/PittsGitHub/poogieBot/internal/types/mhwildtypes"
 	"github.com/bwmarrin/discordgo"
 )
 
@@ -25,13 +25,13 @@ func HandleRandomWeapon(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
-	var skills []types.Skill
+	var skills []mhwildtypes.Skill
 	if err := json.Unmarshal(skillData, &skills); err != nil {
 		s.ChannelMessageSend(m.ChannelID, "❌ Failed to parse skill data.")
 		return
 	}
 
-	skillMap := make(map[int]types.Skill)
+	skillMap := make(map[int]mhwildtypes.Skill)
 	for _, sk := range skills {
 		skillMap[sk.GameID] = sk
 	}
@@ -64,7 +64,7 @@ func HandleRandomWeapon(s *discordgo.Session, m *discordgo.MessageCreate) {
 		return
 	}
 
-	var weapons []types.Weapon
+	var weapons []mhwildtypes.Weapon
 	if err := json.Unmarshal(data, &weapons); err != nil || len(weapons) == 0 {
 		s.ChannelMessageSend(m.ChannelID, fmt.Sprintf("❌ Failed to parse or empty file: %s", randomFile.Name()))
 		return
