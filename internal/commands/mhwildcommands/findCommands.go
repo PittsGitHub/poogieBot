@@ -85,7 +85,6 @@ func FindHighestRankTalismanWithDesiredSkill(rarityValues []int, s *discordgo.Se
 
 func FindDecoration(rarityValues []int, s *discordgo.Session, m *discordgo.MessageCreate, skillID string, itemRank string, skillName string, itemType string) {
 
-	//load all decorations
 	filteredDecorationBySkillName, err := mhwildsdata.FilterDecorationsBySkill(skillID)
 	if err != nil {
 		s.ChannelMessageSend(m.ChannelID, err.Error())
@@ -99,11 +98,6 @@ func FindDecoration(rarityValues []int, s *discordgo.Session, m *discordgo.Messa
 	message := mhwildservices.BuildDecorationSkillSummaryMessage(filteredDecorationBySkillName, skillName)
 	s.ChannelMessageSend(m.ChannelID, message)
 
-	//filter all decorations to those that contain desired skill
-
-	//if no decorations in collection after filter report no decorations exist with desired skill
-
-	//else create message of all decorations
 }
 
 func failedToFindItem(itemRank string, s *discordgo.Session, m *discordgo.MessageCreate, itemType string, skillName string) {
