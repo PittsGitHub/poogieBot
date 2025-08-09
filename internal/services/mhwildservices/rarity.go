@@ -9,6 +9,11 @@ import (
 func ResolveRarityValues(input string) ([]int, error) {
 	input = strings.ToLower(strings.TrimSpace(input))
 
+	// 🆕 Default to "high" if input is empty
+	if input == "" {
+		input = "high"
+	}
+
 	switch input {
 	case "low":
 		return []int{0, 1, 2, 3, 4}, nil

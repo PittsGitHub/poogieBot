@@ -45,9 +45,7 @@ func BuildArmorSkillSummaryMessage(filteredArmor map[int][]mhwildtypes.Armor) st
 
 			if len(armorSkillNames) > 0 {
 				sb.WriteString(fmt.Sprintf(" 🛡️ %s:\n", armorName))
-
 				sb.WriteString(fmt.Sprintf("  %s\n", strings.Join(armorSkillNames, ", ")))
-
 			} else {
 				sb.WriteString(fmt.Sprintf("• %s\n", armorName))
 			}
@@ -67,13 +65,14 @@ func BuildArmorSkillSummaryMessage(filteredArmor map[int][]mhwildtypes.Armor) st
 
 					skillLine := strings.Join(skills, ", ")
 					sb.WriteString(fmt.Sprintf("    ◦ *%s*: %s\n", pieceName, skillLine))
-
 				}
 			} else {
 				sb.WriteString("    ◦ [Matched via set or group bonus]\n")
 			}
 
-			sb.WriteString("\n")
+			// 🔗 Add wiki link per armor entry
+			url := buildArmorUrlFromName(armorName)
+			sb.WriteString(fmt.Sprintf("    🔗 %s\n\n", url))
 		}
 	}
 
@@ -81,17 +80,18 @@ func BuildArmorSkillSummaryMessage(filteredArmor map[int][]mhwildtypes.Armor) st
 }
 
 func BuildTalismanSkillSummaryMessage(talismans []mhwildtypes.TalismanSkillMatch, skillName string) string {
-
 	var sb strings.Builder
 
 	for _, talisman := range talismans {
-		sb.WriteString(fmt.Sprintf("📿 %s:\n (Rarity %d)\n %s x%d \n ",
+		sb.WriteString(fmt.Sprintf("📿 %s:\n (Rarity %d)\n %s x%d\n",
 			talisman.TalismanName,
 			talisman.Rarity,
-
 			skillName,
 			talisman.SkillLevel,
 		))
+
+		url := buildUrlFromName(talisman.TalismanName)
+		sb.WriteString(fmt.Sprintf("🔗 %s\n\n", url))
 	}
 
 	if len(talismans) == 0 {
@@ -105,13 +105,16 @@ func BuildDecorationSkillSummaryMessage(decorations []mhwildtypes.DecorationSkil
 	var sb strings.Builder
 
 	for _, decoration := range decorations {
-		sb.WriteString(fmt.Sprintf("💎 %s:\n Deco Level: %d\n Used in: %s\n %s x%d\n\n",
+		sb.WriteString(fmt.Sprintf("💎 %s:\n Deco Level: %d\n Used in: %s\n %s x%d\n",
 			decoration.DecorationName,
 			decoration.DecorationLevel,
-			decoration.AllowedOn, // Properly display the AllowedOn field
+			decoration.AllowedOn,
 			skillName,
 			decoration.SkillLevel,
 		))
+
+		url := buildUrlFromName(decoration.DecorationName)
+		sb.WriteString(fmt.Sprintf("🔗 %s\n\n", url))
 	}
 
 	if len(decorations) == 0 {
@@ -120,8 +123,8 @@ func BuildDecorationSkillSummaryMessage(decorations []mhwildtypes.DecorationSkil
 
 	return sb.String()
 }
-func BuildWeaponSkillSummaryMessage(filteredWeapons map[int][]mhwildtypes.Weapon) string {
 
+func BuildWeaponSkillSummaryMessage(filteredWeapons map[int][]mhwildtypes.Weapon) string {
 	skillNameMap, err := mhwildsdata.GetSkillNameMap()
 	if err != nil {
 		log.Printf("Warning: failed to load skill name map: %v", err)
@@ -171,9 +174,44 @@ func BuildWeaponSkillSummaryMessage(filteredWeapons map[int][]mhwildtypes.Weapon
 				sb.WriteString("    Skills: [none]\n")
 			}
 
-			sb.WriteString("\n")
+			// Add wiki link for this weapon
+			url := buildUrlFromName(name)
+			sb.WriteString(fmt.Sprintf("    🔗 %s\n\n", url))
 		}
 	}
 
 	return sb.String()
+}
+
+func buildUrlFromName(name string) string {
+	// Clean name: remove [ and ], then replace spaces with +
+	cleanName := strings.ReplaceAll(name, "[", "")
+	cleanName = strings.ReplaceAll(cleanName, "]", "")
+	cleanName = strings.ReplaceAll(cleanName, "/", "-")
+	wikiName := strings.ReplaceAll(cleanName, " ", "+")
+
+	url := fmt.Sprintf("https://monsterhunterwilds.wiki.fextralife.com/%s", wikiName)
+	return url
+}
+
+func buildArmorUrlFromName(name string) string {
+	// Step 1: Clean name
+	cleanName := strings.ReplaceAll(name, "[", "")
+	cleanName = strings.ReplaceAll(cleanName, "]", "")
+	cleanName = strings.ReplaceAll(cleanName, "/", "-")
+
+	// Step 2: Replace Alpha/Beta symbols with full names
+	cleanName = strings.ReplaceAll(cleanName, "α", "Alpha")
+	cleanName = strings.ReplaceAll(cleanName, "β", "Beta")
+
+	// Step 3: Append " Set" if not already there
+	if !strings.HasSuffix(cleanName, "Set") {
+		cleanName += " Set"
+	}
+
+	// Step 4: Format as wiki URL
+	wikiName := strings.ReplaceAll(cleanName, " ", "+")
+	url := fmt.Sprintf("https://monsterhunterwilds.wiki.fextralife.com/%s", wikiName)
+
+	return url
 }
